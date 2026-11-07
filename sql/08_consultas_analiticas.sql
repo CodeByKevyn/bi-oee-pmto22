@@ -81,7 +81,7 @@ LIMIT 20;
 SELECT m.maquina, f.anio,
        COUNT(*) AS fallas,
        ROUND(AVG(e.minutos_paro), 1) AS mttr_min,
-       ROUND(SUM(p.horas) / NULLIF(COUNT(*), 0), 1) AS mtbf_horas
+       ROUND((p.horas - SUM(e.minutos_paro) / 60.0) / NULLIF(COUNT(*), 0), 1) AS mtbf_horas
 FROM dwh.fact_paro e
 JOIN dwh.dim_paro d USING (paro_key)
 JOIN dwh.dim_maquina m USING (maquina_key)
