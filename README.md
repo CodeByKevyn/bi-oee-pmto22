@@ -13,7 +13,7 @@ Integrantes: Samuel Vélez Guzmán y Kevyn Alejandro Patiño Duque. Docente: Ram
 | `powerbi/` | Proyecto de Power BI en formato PBIP (modelo semántico en TMDL e informe de 4 páginas) |
 | `grafana/` | Data source, tablero y alertas como archivos de provisioning |
 | `docker/` y `docker-compose.yml` | Entorno completo con un comando (opcional) |
-| `docs/` | Documentación del taller, de la 01 a la 09 |
+| `docs/` | Documentación del taller, de la 01 a la 12 |
 | `data/raw/` | Aquí va el libro de Excel. No se sube al repositorio |
 
 ## Documentación
@@ -27,6 +27,9 @@ Integrantes: Samuel Vélez Guzmán y Kevyn Alejandro Patiño Duque. Docente: Ram
 7. [Arquitectura, comparativo Power BI y Grafana, evolución a PLC](docs/07_arquitectura_y_comparativo.md)
 8. [Datos personales y seguridad](docs/08_privacidad_y_seguridad.md)
 9. [Hallazgos y recomendaciones](docs/09_hallazgos_y_recomendaciones.md)
+10. [Base de datos y consultas analíticas](docs/10_ddl_y_consultas.md)
+11. [Informe de Power BI](docs/11_power_bi.md)
+12. [Tablero de Grafana y simulación](docs/12_grafana_y_simulacion.md)
 
 ## Modelo en una línea
 
@@ -97,12 +100,12 @@ docker compose --profile simulador up simulador
 Para provocar la falla que dispara la alerta (paro de más del 50 % en las últimas 3 horas), con el entorno local:
 
 ```bash
-python etl/simulador_hora.py --prefill 24 --segundos-por-hora 5 --falla
+python etl/simulador_hora.py --prefill 24 --segundos-por-hora 5 --limpiar --falla Vinilos_3 --falla-en 6 --falla-horas 5
 ```
 
 Sin Docker, hay que instalar Grafana, definir las variables `PGHOST`, `PGPORT`, `PGDATABASE`, `GRAFANA_DB_USER` y `GRAFANA_DB_PASSWORD`, crear el usuario de lectura (ver `docker/12_usuario_grafana.sh`) y apuntar `GF_PATHS_PROVISIONING` a `grafana/provisioning`.
 
-Las alertas `oee-paro-3h-v1` a `v4` (una por máquina) se evalúan cada 10 segundos y avisan cuando el paro de las últimas tres horas pasa del 50 %. El umbral se justifica en el documento 3.
+Las cuatro reglas de alerta (una por máquina, en la carpeta OEE) se evalúan cada 10 segundos y avisan cuando el paro de las últimas tres horas pasa del 50 %. El umbral se justifica en el documento 3.
 
 ## Seguridad
 
