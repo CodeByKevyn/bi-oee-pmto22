@@ -13,70 +13,43 @@
       "ordinal": 0,
       "visualContainers": [
         {
-          "config": "{\"name\": \"3defe12b2b8f30b17d0b\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 8, \"z\": 0, \"width\": 170, \"height\": 32, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"actionButton\", \"drillFilterOtherVisuals\": true, \"objects\": {\"icon\": [{\"properties\": {\"shapeType\": {\"expr\": {\"Literal\": {\"Value\": \"'blank'\"}}}}}], \"text\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Resumen'\"}}}}}]}, \"vcObjects\": {\"visualLink\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"type\": {\"expr\": {\"Literal\": {\"Value\": \"'PageNavigation'\"}}}, \"navigationSection\": {\"expr\": {\"Literal\": {\"Value\": \"'8f4ddda1494c73cf256d'\"}}}}}]}}}",
+          "config": "{\"name\": \"3defe12b2b8f30b17d0b\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 8, \"z\": 0, \"width\": 760, \"height\": 34, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"pageNavigator\", \"drillFilterOtherVisuals\": true}}",
           "filters": "[]",
-          "height": 32,
-          "width": 170,
+          "height": 34,
+          "width": 760,
           "x": 20,
           "y": 8,
           "z": 0.0
         },
         {
-          "config": "{\"name\": \"c73207b37e1499809225\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 200, \"y\": 8, \"z\": 1, \"width\": 170, \"height\": 32, \"tabOrder\": 1}}], \"singleVisual\": {\"visualType\": \"actionButton\", \"drillFilterOtherVisuals\": true, \"objects\": {\"icon\": [{\"properties\": {\"shapeType\": {\"expr\": {\"Literal\": {\"Value\": \"'blank'\"}}}}}], \"text\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Paros'\"}}}}}]}, \"vcObjects\": {\"visualLink\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"type\": {\"expr\": {\"Literal\": {\"Value\": \"'PageNavigation'\"}}}, \"navigationSection\": {\"expr\": {\"Literal\": {\"Value\": \"'c7fdec99108ddb5b5fab'\"}}}}}]}}}",
+          "config": "{\"name\": \"830ccdcc69292f45e678\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 50, \"z\": 10, \"width\": 150, \"height\": 60, \"tabOrder\": 10}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"dim_fecha.anio\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"dim_fecha\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"anio\"}, \"Name\": \"dim_fecha.anio\", \"NativeReferenceName\": \"anio\"}]}, \"objects\": {\"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Dropdown'\"}}}}}]}}}",
           "filters": "[]",
-          "height": 32,
-          "width": 170,
-          "x": 200,
-          "y": 8,
-          "z": 1.0
-        },
-        {
-          "config": "{\"name\": \"70c65387f61376c468ae\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 380, \"y\": 8, \"z\": 2, \"width\": 170, \"height\": 32, \"tabOrder\": 2}}], \"singleVisual\": {\"visualType\": \"actionButton\", \"drillFilterOtherVisuals\": true, \"objects\": {\"icon\": [{\"properties\": {\"shapeType\": {\"expr\": {\"Literal\": {\"Value\": \"'blank'\"}}}}}], \"text\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Máquinas y turnos'\"}}}}}]}, \"vcObjects\": {\"visualLink\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"type\": {\"expr\": {\"Literal\": {\"Value\": \"'PageNavigation'\"}}}, \"navigationSection\": {\"expr\": {\"Literal\": {\"Value\": \"'820173ab48767734d7c1'\"}}}}}]}}}",
-          "filters": "[]",
-          "height": 32,
-          "width": 170,
-          "x": 380,
-          "y": 8,
-          "z": 2.0
-        },
-        {
-          "config": "{\"name\": \"3200d7a94ded97491e23\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 560, \"y\": 8, \"z\": 3, \"width\": 170, \"height\": 32, \"tabOrder\": 3}}], \"singleVisual\": {\"visualType\": \"actionButton\", \"drillFilterOtherVisuals\": true, \"objects\": {\"icon\": [{\"properties\": {\"shapeType\": {\"expr\": {\"Literal\": {\"Value\": \"'blank'\"}}}}}], \"text\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Comparativo anual'\"}}}}}]}, \"vcObjects\": {\"visualLink\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"type\": {\"expr\": {\"Literal\": {\"Value\": \"'PageNavigation'\"}}}, \"navigationSection\": {\"expr\": {\"Literal\": {\"Value\": \"'309d965eda32dae44550'\"}}}}}]}}}",
-          "filters": "[]",
-          "height": 32,
-          "width": 170,
-          "x": 560,
-          "y": 8,
-          "z": 3.0
-        },
-        {
-          "config": "{\"name\": \"830ccdcc69292f45e678\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 50, \"z\": 10, \"width\": 150, \"height\": 80, \"tabOrder\": 10}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"dim_fecha.anio\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"dim_fecha\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"anio\"}, \"Name\": \"dim_fecha.anio\", \"NativeReferenceName\": \"anio\"}]}}}",
-          "filters": "[]",
-          "height": 80,
+          "height": 60,
           "width": 150,
           "x": 20,
           "y": 50,
           "z": 10.0
         },
         {
-          "config": "{\"name\": \"9d2ca13ffe7979cb9e86\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 180, \"y\": 50, \"z\": 11, \"width\": 170, \"height\": 80, \"tabOrder\": 11}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"dim_maquina.maquina\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"dim_maquina\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"maquina\"}, \"Name\": \"dim_maquina.maquina\", \"NativeReferenceName\": \"maquina\"}]}}}",
+          "config": "{\"name\": \"9d2ca13ffe7979cb9e86\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 180, \"y\": 50, \"z\": 11, \"width\": 170, \"height\": 60, \"tabOrder\": 11}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"dim_maquina.maquina\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"dim_maquina\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"maquina\"}, \"Name\": \"dim_maquina.maquina\", \"NativeReferenceName\": \"maquina\"}]}, \"objects\": {\"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Dropdown'\"}}}}}]}}}",
           "filters": "[]",
-          "height": 80,
+          "height": 60,
           "width": 170,
           "x": 180,
           "y": 50,
           "z": 11.0
         },
         {
-          "config": "{\"name\": \"18182fa91425cb008853\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 360, \"y\": 50, \"z\": 12, \"width\": 230, \"height\": 80, \"tabOrder\": 12}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"dim_turno.turno\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t\", \"Entity\": \"dim_turno\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t\"}}, \"Property\": \"turno\"}, \"Name\": \"dim_turno.turno\", \"NativeReferenceName\": \"turno\"}]}}}",
+          "config": "{\"name\": \"18182fa91425cb008853\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 360, \"y\": 50, \"z\": 12, \"width\": 230, \"height\": 60, \"tabOrder\": 12}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"dim_turno.turno\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t\", \"Entity\": \"dim_turno\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t\"}}, \"Property\": \"turno\"}, \"Name\": \"dim_turno.turno\", \"NativeReferenceName\": \"turno\"}]}, \"objects\": {\"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Dropdown'\"}}}}}]}}}",
           "filters": "[]",
-          "height": 80,
+          "height": 60,
           "width": 230,
           "x": 360,
           "y": 50,
           "z": 12.0
         },
         {
-          "config": "{\"name\": \"244c4dabb4817253edc6\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 610, \"y\": 50, \"z\": 13, \"width\": 130, \"height\": 80, \"tabOrder\": 13}}], \"singleVisual\": {\"visualType\": \"cardVisual\", \"projections\": {\"Data\": [{\"queryRef\": \"Medidas.OEE\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"OEE\"}, \"Name\": \"Medidas.OEE\", \"NativeReferenceName\": \"OEE\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"OEE\"}}}]}, \"hasDefaultSort\": true}}",
+          "config": "{\"name\": \"244c4dabb4817253edc6\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 610, \"y\": 50, \"z\": 13, \"width\": 130, \"height\": 80, \"tabOrder\": 13}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Medidas.OEE\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"OEE\"}, \"Name\": \"Medidas.OEE\", \"NativeReferenceName\": \"OEE\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}], \"categoryLabels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"9D\"}}}}}]}}}",
           "filters": "[]",
           "height": 80,
           "width": 130,
@@ -85,7 +58,7 @@
           "z": 13.0
         },
         {
-          "config": "{\"name\": \"cf4489e7d15f17362f25\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 750, \"y\": 50, \"z\": 14, \"width\": 130, \"height\": 80, \"tabOrder\": 14}}], \"singleVisual\": {\"visualType\": \"cardVisual\", \"projections\": {\"Data\": [{\"queryRef\": \"Medidas.Disponibilidad\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Disponibilidad\"}, \"Name\": \"Medidas.Disponibilidad\", \"NativeReferenceName\": \"Disponibilidad\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Disponibilidad\"}}}]}, \"hasDefaultSort\": true}}",
+          "config": "{\"name\": \"cf4489e7d15f17362f25\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 750, \"y\": 50, \"z\": 14, \"width\": 130, \"height\": 80, \"tabOrder\": 14}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Medidas.Disponibilidad\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Disponibilidad\"}, \"Name\": \"Medidas.Disponibilidad\", \"NativeReferenceName\": \"Disponibilidad\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}], \"categoryLabels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"9D\"}}}}}]}}}",
           "filters": "[]",
           "height": 80,
           "width": 130,
@@ -94,7 +67,7 @@
           "z": 14.0
         },
         {
-          "config": "{\"name\": \"a26bb1852f27e3eff9c0\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 890, \"y\": 50, \"z\": 15, \"width\": 130, \"height\": 80, \"tabOrder\": 15}}], \"singleVisual\": {\"visualType\": \"cardVisual\", \"projections\": {\"Data\": [{\"queryRef\": \"Medidas.Rendimiento\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Rendimiento\"}, \"Name\": \"Medidas.Rendimiento\", \"NativeReferenceName\": \"Rendimiento\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Rendimiento\"}}}]}, \"hasDefaultSort\": true}}",
+          "config": "{\"name\": \"a26bb1852f27e3eff9c0\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 890, \"y\": 50, \"z\": 15, \"width\": 130, \"height\": 80, \"tabOrder\": 15}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Medidas.Rendimiento\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Rendimiento\"}, \"Name\": \"Medidas.Rendimiento\", \"NativeReferenceName\": \"Rendimiento\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}], \"categoryLabels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"9D\"}}}}}]}}}",
           "filters": "[]",
           "height": 80,
           "width": 130,
@@ -103,7 +76,7 @@
           "z": 15.0
         },
         {
-          "config": "{\"name\": \"fb71986e86cb0ab8ab67\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1030, \"y\": 50, \"z\": 16, \"width\": 110, \"height\": 80, \"tabOrder\": 16}}], \"singleVisual\": {\"visualType\": \"cardVisual\", \"projections\": {\"Data\": [{\"queryRef\": \"Medidas.Calidad\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Calidad\"}, \"Name\": \"Medidas.Calidad\", \"NativeReferenceName\": \"Calidad\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Calidad\"}}}]}, \"hasDefaultSort\": true}}",
+          "config": "{\"name\": \"fb71986e86cb0ab8ab67\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1030, \"y\": 50, \"z\": 16, \"width\": 110, \"height\": 80, \"tabOrder\": 16}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Medidas.Calidad\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Calidad\"}, \"Name\": \"Medidas.Calidad\", \"NativeReferenceName\": \"Calidad\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}], \"categoryLabels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"9D\"}}}}}]}}}",
           "filters": "[]",
           "height": 80,
           "width": 110,
@@ -112,7 +85,7 @@
           "z": 16.0
         },
         {
-          "config": "{\"name\": \"73f7f6fa5db8656abd72\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1150, \"y\": 50, \"z\": 17, \"width\": 110, \"height\": 80, \"tabOrder\": 17}}], \"singleVisual\": {\"visualType\": \"cardVisual\", \"projections\": {\"Data\": [{\"queryRef\": \"Medidas.Productividad P-MTO-22\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Productividad P-MTO-22\"}, \"Name\": \"Medidas.Productividad P-MTO-22\", \"NativeReferenceName\": \"Productividad P-MTO-22\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Productividad P-MTO-22\"}}}]}, \"hasDefaultSort\": true}}",
+          "config": "{\"name\": \"73f7f6fa5db8656abd72\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1150, \"y\": 50, \"z\": 17, \"width\": 110, \"height\": 80, \"tabOrder\": 17}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Medidas.Productividad P-MTO-22\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Productividad P-MTO-22\"}, \"Name\": \"Medidas.Productividad P-MTO-22\", \"NativeReferenceName\": \"Productividad P-MTO-22\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}], \"categoryLabels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"9D\"}}}}}]}}}",
           "filters": "[]",
           "height": 80,
           "width": 110,
@@ -169,61 +142,34 @@
       "ordinal": 1,
       "visualContainers": [
         {
-          "config": "{\"name\": \"11fa079dd25a49fe85b0\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 8, \"z\": 0, \"width\": 170, \"height\": 32, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"actionButton\", \"drillFilterOtherVisuals\": true, \"objects\": {\"icon\": [{\"properties\": {\"shapeType\": {\"expr\": {\"Literal\": {\"Value\": \"'blank'\"}}}}}], \"text\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Resumen'\"}}}}}]}, \"vcObjects\": {\"visualLink\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"type\": {\"expr\": {\"Literal\": {\"Value\": \"'PageNavigation'\"}}}, \"navigationSection\": {\"expr\": {\"Literal\": {\"Value\": \"'8f4ddda1494c73cf256d'\"}}}}}]}}}",
+          "config": "{\"name\": \"154cd7185ddaee82ec3f\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 8, \"z\": 0, \"width\": 760, \"height\": 34, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"pageNavigator\", \"drillFilterOtherVisuals\": true}}",
           "filters": "[]",
-          "height": 32,
-          "width": 170,
+          "height": 34,
+          "width": 760,
           "x": 20,
           "y": 8,
           "z": 0.0
         },
         {
-          "config": "{\"name\": \"1ba1c42b7170902a174f\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 200, \"y\": 8, \"z\": 1, \"width\": 170, \"height\": 32, \"tabOrder\": 1}}], \"singleVisual\": {\"visualType\": \"actionButton\", \"drillFilterOtherVisuals\": true, \"objects\": {\"icon\": [{\"properties\": {\"shapeType\": {\"expr\": {\"Literal\": {\"Value\": \"'blank'\"}}}}}], \"text\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Paros'\"}}}}}]}, \"vcObjects\": {\"visualLink\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"type\": {\"expr\": {\"Literal\": {\"Value\": \"'PageNavigation'\"}}}, \"navigationSection\": {\"expr\": {\"Literal\": {\"Value\": \"'c7fdec99108ddb5b5fab'\"}}}}}]}}}",
+          "config": "{\"name\": \"c73207b37e1499809225\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 50, \"z\": 10, \"width\": 150, \"height\": 60, \"tabOrder\": 10}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"dim_fecha.anio\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"dim_fecha\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"anio\"}, \"Name\": \"dim_fecha.anio\", \"NativeReferenceName\": \"anio\"}]}, \"objects\": {\"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Dropdown'\"}}}}}]}}}",
           "filters": "[]",
-          "height": 32,
-          "width": 170,
-          "x": 200,
-          "y": 8,
-          "z": 1.0
-        },
-        {
-          "config": "{\"name\": \"d8b91b98fbe466809a11\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 380, \"y\": 8, \"z\": 2, \"width\": 170, \"height\": 32, \"tabOrder\": 2}}], \"singleVisual\": {\"visualType\": \"actionButton\", \"drillFilterOtherVisuals\": true, \"objects\": {\"icon\": [{\"properties\": {\"shapeType\": {\"expr\": {\"Literal\": {\"Value\": \"'blank'\"}}}}}], \"text\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Máquinas y turnos'\"}}}}}]}, \"vcObjects\": {\"visualLink\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"type\": {\"expr\": {\"Literal\": {\"Value\": \"'PageNavigation'\"}}}, \"navigationSection\": {\"expr\": {\"Literal\": {\"Value\": \"'820173ab48767734d7c1'\"}}}}}]}}}",
-          "filters": "[]",
-          "height": 32,
-          "width": 170,
-          "x": 380,
-          "y": 8,
-          "z": 2.0
-        },
-        {
-          "config": "{\"name\": \"111b62f28d1a4a789cb3\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 560, \"y\": 8, \"z\": 3, \"width\": 170, \"height\": 32, \"tabOrder\": 3}}], \"singleVisual\": {\"visualType\": \"actionButton\", \"drillFilterOtherVisuals\": true, \"objects\": {\"icon\": [{\"properties\": {\"shapeType\": {\"expr\": {\"Literal\": {\"Value\": \"'blank'\"}}}}}], \"text\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Comparativo anual'\"}}}}}]}, \"vcObjects\": {\"visualLink\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"type\": {\"expr\": {\"Literal\": {\"Value\": \"'PageNavigation'\"}}}, \"navigationSection\": {\"expr\": {\"Literal\": {\"Value\": \"'309d965eda32dae44550'\"}}}}}]}}}",
-          "filters": "[]",
-          "height": 32,
-          "width": 170,
-          "x": 560,
-          "y": 8,
-          "z": 3.0
-        },
-        {
-          "config": "{\"name\": \"a3ea3bd0334684e55160\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 50, \"z\": 10, \"width\": 150, \"height\": 80, \"tabOrder\": 10}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"dim_fecha.anio\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"dim_fecha\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"anio\"}, \"Name\": \"dim_fecha.anio\", \"NativeReferenceName\": \"anio\"}]}}}",
-          "filters": "[]",
-          "height": 80,
+          "height": 60,
           "width": 150,
           "x": 20,
           "y": 50,
           "z": 10.0
         },
         {
-          "config": "{\"name\": \"012d7ff122294b4d8474\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 180, \"y\": 50, \"z\": 11, \"width\": 170, \"height\": 80, \"tabOrder\": 11}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"dim_maquina.maquina\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"dim_maquina\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"maquina\"}, \"Name\": \"dim_maquina.maquina\", \"NativeReferenceName\": \"maquina\"}]}}}",
+          "config": "{\"name\": \"70c65387f61376c468ae\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 180, \"y\": 50, \"z\": 11, \"width\": 170, \"height\": 60, \"tabOrder\": 11}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"dim_maquina.maquina\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"dim_maquina\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"maquina\"}, \"Name\": \"dim_maquina.maquina\", \"NativeReferenceName\": \"maquina\"}]}, \"objects\": {\"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Dropdown'\"}}}}}]}}}",
           "filters": "[]",
-          "height": 80,
+          "height": 60,
           "width": 170,
           "x": 180,
           "y": 50,
           "z": 11.0
         },
         {
-          "config": "{\"name\": \"751315c1d2dfa9964aef\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 370, \"y\": 50, \"z\": 12, \"width\": 150, \"height\": 80, \"tabOrder\": 12}}], \"singleVisual\": {\"visualType\": \"cardVisual\", \"projections\": {\"Data\": [{\"queryRef\": \"Medidas.Horas Paro No Programado\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Paro No Programado\"}, \"Name\": \"Medidas.Horas Paro No Programado\", \"NativeReferenceName\": \"Horas Paro No Programado\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Paro No Programado\"}}}]}, \"hasDefaultSort\": true}}",
+          "config": "{\"name\": \"3200d7a94ded97491e23\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 370, \"y\": 50, \"z\": 12, \"width\": 150, \"height\": 80, \"tabOrder\": 12}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Medidas.Horas Paro No Programado\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Paro No Programado\"}, \"Name\": \"Medidas.Horas Paro No Programado\", \"NativeReferenceName\": \"Horas Paro No Programado\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}], \"categoryLabels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"9D\"}}}}}]}}}",
           "filters": "[]",
           "height": 80,
           "width": 150,
@@ -232,7 +178,7 @@
           "z": 12.0
         },
         {
-          "config": "{\"name\": \"68224735af1ca7a11490\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 530, \"y\": 50, \"z\": 13, \"width\": 150, \"height\": 80, \"tabOrder\": 13}}], \"singleVisual\": {\"visualType\": \"cardVisual\", \"projections\": {\"Data\": [{\"queryRef\": \"Medidas.Eventos de Paro\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Eventos de Paro\"}, \"Name\": \"Medidas.Eventos de Paro\", \"NativeReferenceName\": \"Eventos de Paro\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Eventos de Paro\"}}}]}, \"hasDefaultSort\": true}}",
+          "config": "{\"name\": \"a3ea3bd0334684e55160\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 530, \"y\": 50, \"z\": 13, \"width\": 150, \"height\": 80, \"tabOrder\": 13}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Medidas.Eventos de Paro\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Eventos de Paro\"}, \"Name\": \"Medidas.Eventos de Paro\", \"NativeReferenceName\": \"Eventos de Paro\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}], \"categoryLabels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"9D\"}}}}}]}}}",
           "filters": "[]",
           "height": 80,
           "width": 150,
@@ -241,7 +187,7 @@
           "z": 13.0
         },
         {
-          "config": "{\"name\": \"fee58d1fe1daff666589\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 690, \"y\": 50, \"z\": 14, \"width\": 150, \"height\": 80, \"tabOrder\": 14}}], \"singleVisual\": {\"visualType\": \"cardVisual\", \"projections\": {\"Data\": [{\"queryRef\": \"Medidas.MTTR (min)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"MTTR (min)\"}, \"Name\": \"Medidas.MTTR (min)\", \"NativeReferenceName\": \"MTTR (min)\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"MTTR (min)\"}}}]}, \"hasDefaultSort\": true}}",
+          "config": "{\"name\": \"012d7ff122294b4d8474\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 690, \"y\": 50, \"z\": 14, \"width\": 150, \"height\": 80, \"tabOrder\": 14}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Medidas.MTTR (min)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"MTTR (min)\"}, \"Name\": \"Medidas.MTTR (min)\", \"NativeReferenceName\": \"MTTR (min)\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}], \"categoryLabels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"9D\"}}}}}]}}}",
           "filters": "[]",
           "height": 80,
           "width": 150,
@@ -250,7 +196,7 @@
           "z": 14.0
         },
         {
-          "config": "{\"name\": \"154cd7185ddaee82ec3f\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 145, \"z\": 15, \"width\": 640, \"height\": 320, \"tabOrder\": 15}}], \"singleVisual\": {\"visualType\": \"lineClusteredColumnComboChart\", \"projections\": {\"Category\": [{\"queryRef\": \"dim_paro.nombre_codigo\", \"active\": true}], \"Y\": [{\"queryRef\": \"Medidas.Horas Paro No Programado\"}], \"Y2\": [{\"queryRef\": \"Medidas.Pareto Acumulado %\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"p\", \"Entity\": \"dim_paro\", \"Type\": 0}, {\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Property\": \"nombre_codigo\"}, \"Name\": \"dim_paro.nombre_codigo\", \"NativeReferenceName\": \"nombre_codigo\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Paro No Programado\"}, \"Name\": \"Medidas.Horas Paro No Programado\", \"NativeReferenceName\": \"Horas Paro No Programado\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Pareto Acumulado %\"}, \"Name\": \"Medidas.Pareto Acumulado %\", \"NativeReferenceName\": \"Pareto Acumulado %\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Paro No Programado\"}}}]}, \"hasDefaultSort\": true}}",
+          "config": "{\"name\": \"751315c1d2dfa9964aef\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 145, \"z\": 15, \"width\": 640, \"height\": 320, \"tabOrder\": 15}}], \"singleVisual\": {\"visualType\": \"lineClusteredColumnComboChart\", \"projections\": {\"Category\": [{\"queryRef\": \"dim_paro.nombre_codigo\", \"active\": true}], \"Y\": [{\"queryRef\": \"Medidas.Horas Paro No Programado\"}], \"Y2\": [{\"queryRef\": \"Medidas.Pareto Acumulado %\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"p\", \"Entity\": \"dim_paro\", \"Type\": 0}, {\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Property\": \"nombre_codigo\"}, \"Name\": \"dim_paro.nombre_codigo\", \"NativeReferenceName\": \"nombre_codigo\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Paro No Programado\"}, \"Name\": \"Medidas.Horas Paro No Programado\", \"NativeReferenceName\": \"Horas Paro No Programado\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Pareto Acumulado %\"}, \"Name\": \"Medidas.Pareto Acumulado %\", \"NativeReferenceName\": \"Pareto Acumulado %\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Paro No Programado\"}}}]}, \"hasDefaultSort\": true}}",
           "filters": "[]",
           "height": 320,
           "width": 640,
@@ -259,7 +205,7 @@
           "z": 15.0
         },
         {
-          "config": "{\"name\": \"50b64105cca7b53302fc\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 680, \"y\": 145, \"z\": 16, \"width\": 580, \"height\": 320, \"tabOrder\": 16}}], \"singleVisual\": {\"visualType\": \"clusteredBarChart\", \"projections\": {\"Category\": [{\"queryRef\": \"dim_paro.Jerarquía de paros.area_impacto\", \"active\": true}, {\"queryRef\": \"dim_paro.Jerarquía de paros.nombre_codigo\"}, {\"queryRef\": \"dim_paro.Jerarquía de paros.subcodigo_nivel1\"}, {\"queryRef\": \"dim_paro.Jerarquía de paros.subcodigo_nivel2\"}], \"Y\": [{\"queryRef\": \"Medidas.Horas Paro\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"p\", \"Entity\": \"dim_paro\", \"Type\": 0}, {\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"HierarchyLevel\": {\"Expression\": {\"Hierarchy\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Hierarchy\": \"Jerarquía de paros\"}}, \"Level\": \"area_impacto\"}, \"Name\": \"dim_paro.Jerarquía de paros.area_impacto\", \"NativeReferenceName\": \"area_impacto\"}, {\"HierarchyLevel\": {\"Expression\": {\"Hierarchy\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Hierarchy\": \"Jerarquía de paros\"}}, \"Level\": \"nombre_codigo\"}, \"Name\": \"dim_paro.Jerarquía de paros.nombre_codigo\", \"NativeReferenceName\": \"nombre_codigo\"}, {\"HierarchyLevel\": {\"Expression\": {\"Hierarchy\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Hierarchy\": \"Jerarquía de paros\"}}, \"Level\": \"subcodigo_nivel1\"}, \"Name\": \"dim_paro.Jerarquía de paros.subcodigo_nivel1\", \"NativeReferenceName\": \"subcodigo_nivel1\"}, {\"HierarchyLevel\": {\"Expression\": {\"Hierarchy\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Hierarchy\": \"Jerarquía de paros\"}}, \"Level\": \"subcodigo_nivel2\"}, \"Name\": \"dim_paro.Jerarquía de paros.subcodigo_nivel2\", \"NativeReferenceName\": \"subcodigo_nivel2\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Paro\"}, \"Name\": \"Medidas.Horas Paro\", \"NativeReferenceName\": \"Horas Paro\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Paro\"}}}]}, \"hasDefaultSort\": true}}",
+          "config": "{\"name\": \"68224735af1ca7a11490\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 680, \"y\": 145, \"z\": 16, \"width\": 580, \"height\": 320, \"tabOrder\": 16}}], \"singleVisual\": {\"visualType\": \"clusteredBarChart\", \"projections\": {\"Category\": [{\"queryRef\": \"dim_paro.Jerarquía de paros.area_impacto\", \"active\": true}, {\"queryRef\": \"dim_paro.Jerarquía de paros.nombre_codigo\"}, {\"queryRef\": \"dim_paro.Jerarquía de paros.subcodigo_nivel1\"}, {\"queryRef\": \"dim_paro.Jerarquía de paros.subcodigo_nivel2\"}], \"Y\": [{\"queryRef\": \"Medidas.Horas Paro\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"p\", \"Entity\": \"dim_paro\", \"Type\": 0}, {\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"HierarchyLevel\": {\"Expression\": {\"Hierarchy\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Hierarchy\": \"Jerarquía de paros\"}}, \"Level\": \"area_impacto\"}, \"Name\": \"dim_paro.Jerarquía de paros.area_impacto\", \"NativeReferenceName\": \"area_impacto\"}, {\"HierarchyLevel\": {\"Expression\": {\"Hierarchy\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Hierarchy\": \"Jerarquía de paros\"}}, \"Level\": \"nombre_codigo\"}, \"Name\": \"dim_paro.Jerarquía de paros.nombre_codigo\", \"NativeReferenceName\": \"nombre_codigo\"}, {\"HierarchyLevel\": {\"Expression\": {\"Hierarchy\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Hierarchy\": \"Jerarquía de paros\"}}, \"Level\": \"subcodigo_nivel1\"}, \"Name\": \"dim_paro.Jerarquía de paros.subcodigo_nivel1\", \"NativeReferenceName\": \"subcodigo_nivel1\"}, {\"HierarchyLevel\": {\"Expression\": {\"Hierarchy\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Hierarchy\": \"Jerarquía de paros\"}}, \"Level\": \"subcodigo_nivel2\"}, \"Name\": \"dim_paro.Jerarquía de paros.subcodigo_nivel2\", \"NativeReferenceName\": \"subcodigo_nivel2\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Paro\"}, \"Name\": \"Medidas.Horas Paro\", \"NativeReferenceName\": \"Horas Paro\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Paro\"}}}]}, \"hasDefaultSort\": true}}",
           "filters": "[]",
           "height": 320,
           "width": 580,
@@ -268,7 +214,7 @@
           "z": 16.0
         },
         {
-          "config": "{\"name\": \"834c3acb6266c20ba2c2\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 480, \"z\": 17, \"width\": 1240, \"height\": 230, \"tabOrder\": 17}}], \"singleVisual\": {\"visualType\": \"pivotTable\", \"projections\": {\"Rows\": [{\"queryRef\": \"dim_paro.Jerarquía de paros.area_impacto\", \"active\": true}, {\"queryRef\": \"dim_paro.Jerarquía de paros.nombre_codigo\"}, {\"queryRef\": \"dim_paro.Jerarquía de paros.subcodigo_nivel1\"}, {\"queryRef\": \"dim_paro.Jerarquía de paros.subcodigo_nivel2\"}], \"Columns\": [{\"queryRef\": \"dim_fecha.anio\", \"active\": true}], \"Values\": [{\"queryRef\": \"Medidas.Horas Paro\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"p\", \"Entity\": \"dim_paro\", \"Type\": 0}, {\"Name\": \"d\", \"Entity\": \"dim_fecha\", \"Type\": 0}, {\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"HierarchyLevel\": {\"Expression\": {\"Hierarchy\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Hierarchy\": \"Jerarquía de paros\"}}, \"Level\": \"area_impacto\"}, \"Name\": \"dim_paro.Jerarquía de paros.area_impacto\", \"NativeReferenceName\": \"area_impacto\"}, {\"HierarchyLevel\": {\"Expression\": {\"Hierarchy\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Hierarchy\": \"Jerarquía de paros\"}}, \"Level\": \"nombre_codigo\"}, \"Name\": \"dim_paro.Jerarquía de paros.nombre_codigo\", \"NativeReferenceName\": \"nombre_codigo\"}, {\"HierarchyLevel\": {\"Expression\": {\"Hierarchy\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Hierarchy\": \"Jerarquía de paros\"}}, \"Level\": \"subcodigo_nivel1\"}, \"Name\": \"dim_paro.Jerarquía de paros.subcodigo_nivel1\", \"NativeReferenceName\": \"subcodigo_nivel1\"}, {\"HierarchyLevel\": {\"Expression\": {\"Hierarchy\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Hierarchy\": \"Jerarquía de paros\"}}, \"Level\": \"subcodigo_nivel2\"}, \"Name\": \"dim_paro.Jerarquía de paros.subcodigo_nivel2\", \"NativeReferenceName\": \"subcodigo_nivel2\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"anio\"}, \"Name\": \"dim_fecha.anio\", \"NativeReferenceName\": \"anio\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Paro\"}, \"Name\": \"Medidas.Horas Paro\", \"NativeReferenceName\": \"Horas Paro\"}]}}}",
+          "config": "{\"name\": \"fee58d1fe1daff666589\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 480, \"z\": 17, \"width\": 1240, \"height\": 230, \"tabOrder\": 17}}], \"singleVisual\": {\"visualType\": \"pivotTable\", \"projections\": {\"Rows\": [{\"queryRef\": \"dim_paro.Jerarquía de paros.area_impacto\", \"active\": true}, {\"queryRef\": \"dim_paro.Jerarquía de paros.nombre_codigo\"}, {\"queryRef\": \"dim_paro.Jerarquía de paros.subcodigo_nivel1\"}, {\"queryRef\": \"dim_paro.Jerarquía de paros.subcodigo_nivel2\"}], \"Columns\": [{\"queryRef\": \"dim_fecha.anio\", \"active\": true}], \"Values\": [{\"queryRef\": \"Medidas.Horas Paro\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"p\", \"Entity\": \"dim_paro\", \"Type\": 0}, {\"Name\": \"d\", \"Entity\": \"dim_fecha\", \"Type\": 0}, {\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"HierarchyLevel\": {\"Expression\": {\"Hierarchy\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Hierarchy\": \"Jerarquía de paros\"}}, \"Level\": \"area_impacto\"}, \"Name\": \"dim_paro.Jerarquía de paros.area_impacto\", \"NativeReferenceName\": \"area_impacto\"}, {\"HierarchyLevel\": {\"Expression\": {\"Hierarchy\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Hierarchy\": \"Jerarquía de paros\"}}, \"Level\": \"nombre_codigo\"}, \"Name\": \"dim_paro.Jerarquía de paros.nombre_codigo\", \"NativeReferenceName\": \"nombre_codigo\"}, {\"HierarchyLevel\": {\"Expression\": {\"Hierarchy\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Hierarchy\": \"Jerarquía de paros\"}}, \"Level\": \"subcodigo_nivel1\"}, \"Name\": \"dim_paro.Jerarquía de paros.subcodigo_nivel1\", \"NativeReferenceName\": \"subcodigo_nivel1\"}, {\"HierarchyLevel\": {\"Expression\": {\"Hierarchy\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Hierarchy\": \"Jerarquía de paros\"}}, \"Level\": \"subcodigo_nivel2\"}, \"Name\": \"dim_paro.Jerarquía de paros.subcodigo_nivel2\", \"NativeReferenceName\": \"subcodigo_nivel2\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"anio\"}, \"Name\": \"dim_fecha.anio\", \"NativeReferenceName\": \"anio\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Paro\"}, \"Name\": \"Medidas.Horas Paro\", \"NativeReferenceName\": \"Horas Paro\"}]}}}",
           "filters": "[]",
           "height": 230,
           "width": 1240,
@@ -289,61 +235,34 @@
       "ordinal": 2,
       "visualContainers": [
         {
-          "config": "{\"name\": \"90f512b2a4146b77730f\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 8, \"z\": 0, \"width\": 170, \"height\": 32, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"actionButton\", \"drillFilterOtherVisuals\": true, \"objects\": {\"icon\": [{\"properties\": {\"shapeType\": {\"expr\": {\"Literal\": {\"Value\": \"'blank'\"}}}}}], \"text\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Resumen'\"}}}}}]}, \"vcObjects\": {\"visualLink\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"type\": {\"expr\": {\"Literal\": {\"Value\": \"'PageNavigation'\"}}}, \"navigationSection\": {\"expr\": {\"Literal\": {\"Value\": \"'8f4ddda1494c73cf256d'\"}}}}}]}}}",
+          "config": "{\"name\": \"111b62f28d1a4a789cb3\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 8, \"z\": 0, \"width\": 760, \"height\": 34, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"pageNavigator\", \"drillFilterOtherVisuals\": true}}",
           "filters": "[]",
-          "height": 32,
-          "width": 170,
+          "height": 34,
+          "width": 760,
           "x": 20,
           "y": 8,
           "z": 0.0
         },
         {
-          "config": "{\"name\": \"c74c32d03fdda123f501\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 200, \"y\": 8, \"z\": 1, \"width\": 170, \"height\": 32, \"tabOrder\": 1}}], \"singleVisual\": {\"visualType\": \"actionButton\", \"drillFilterOtherVisuals\": true, \"objects\": {\"icon\": [{\"properties\": {\"shapeType\": {\"expr\": {\"Literal\": {\"Value\": \"'blank'\"}}}}}], \"text\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Paros'\"}}}}}]}, \"vcObjects\": {\"visualLink\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"type\": {\"expr\": {\"Literal\": {\"Value\": \"'PageNavigation'\"}}}, \"navigationSection\": {\"expr\": {\"Literal\": {\"Value\": \"'c7fdec99108ddb5b5fab'\"}}}}}]}}}",
+          "config": "{\"name\": \"50b64105cca7b53302fc\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 50, \"z\": 10, \"width\": 150, \"height\": 60, \"tabOrder\": 10}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"dim_fecha.anio\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"dim_fecha\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"anio\"}, \"Name\": \"dim_fecha.anio\", \"NativeReferenceName\": \"anio\"}]}, \"objects\": {\"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Dropdown'\"}}}}}]}}}",
           "filters": "[]",
-          "height": 32,
-          "width": 170,
-          "x": 200,
-          "y": 8,
-          "z": 1.0
-        },
-        {
-          "config": "{\"name\": \"563e45100358acc6d8f2\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 380, \"y\": 8, \"z\": 2, \"width\": 170, \"height\": 32, \"tabOrder\": 2}}], \"singleVisual\": {\"visualType\": \"actionButton\", \"drillFilterOtherVisuals\": true, \"objects\": {\"icon\": [{\"properties\": {\"shapeType\": {\"expr\": {\"Literal\": {\"Value\": \"'blank'\"}}}}}], \"text\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Máquinas y turnos'\"}}}}}]}, \"vcObjects\": {\"visualLink\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"type\": {\"expr\": {\"Literal\": {\"Value\": \"'PageNavigation'\"}}}, \"navigationSection\": {\"expr\": {\"Literal\": {\"Value\": \"'820173ab48767734d7c1'\"}}}}}]}}}",
-          "filters": "[]",
-          "height": 32,
-          "width": 170,
-          "x": 380,
-          "y": 8,
-          "z": 2.0
-        },
-        {
-          "config": "{\"name\": \"55244fab6f3e164f1513\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 560, \"y\": 8, \"z\": 3, \"width\": 170, \"height\": 32, \"tabOrder\": 3}}], \"singleVisual\": {\"visualType\": \"actionButton\", \"drillFilterOtherVisuals\": true, \"objects\": {\"icon\": [{\"properties\": {\"shapeType\": {\"expr\": {\"Literal\": {\"Value\": \"'blank'\"}}}}}], \"text\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Comparativo anual'\"}}}}}]}, \"vcObjects\": {\"visualLink\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"type\": {\"expr\": {\"Literal\": {\"Value\": \"'PageNavigation'\"}}}, \"navigationSection\": {\"expr\": {\"Literal\": {\"Value\": \"'309d965eda32dae44550'\"}}}}}]}}}",
-          "filters": "[]",
-          "height": 32,
-          "width": 170,
-          "x": 560,
-          "y": 8,
-          "z": 3.0
-        },
-        {
-          "config": "{\"name\": \"d8e90452ef05f542441d\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 50, \"z\": 10, \"width\": 150, \"height\": 80, \"tabOrder\": 10}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"dim_fecha.anio\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"dim_fecha\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"anio\"}, \"Name\": \"dim_fecha.anio\", \"NativeReferenceName\": \"anio\"}]}}}",
-          "filters": "[]",
-          "height": 80,
+          "height": 60,
           "width": 150,
           "x": 20,
           "y": 50,
           "z": 10.0
         },
         {
-          "config": "{\"name\": \"36a80023b682af5570ee\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 180, \"y\": 50, \"z\": 11, \"width\": 230, \"height\": 80, \"tabOrder\": 11}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"dim_turno.turno\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t\", \"Entity\": \"dim_turno\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t\"}}, \"Property\": \"turno\"}, \"Name\": \"dim_turno.turno\", \"NativeReferenceName\": \"turno\"}]}}}",
+          "config": "{\"name\": \"834c3acb6266c20ba2c2\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 180, \"y\": 50, \"z\": 11, \"width\": 230, \"height\": 60, \"tabOrder\": 11}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"dim_turno.turno\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t\", \"Entity\": \"dim_turno\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t\"}}, \"Property\": \"turno\"}, \"Name\": \"dim_turno.turno\", \"NativeReferenceName\": \"turno\"}]}, \"objects\": {\"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Dropdown'\"}}}}}]}}}",
           "filters": "[]",
-          "height": 80,
+          "height": 60,
           "width": 230,
           "x": 180,
           "y": 50,
           "z": 11.0
         },
         {
-          "config": "{\"name\": \"e907ed52a24135b00a54\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 145, \"z\": 12, \"width\": 600, \"height\": 270, \"tabOrder\": 12}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"dim_turno.turno\", \"active\": true}], \"Y\": [{\"queryRef\": \"Medidas.Disponibilidad\"}, {\"queryRef\": \"Medidas.OEE\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t\", \"Entity\": \"dim_turno\", \"Type\": 0}, {\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t\"}}, \"Property\": \"turno\"}, \"Name\": \"dim_turno.turno\", \"NativeReferenceName\": \"turno\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Disponibilidad\"}, \"Name\": \"Medidas.Disponibilidad\", \"NativeReferenceName\": \"Disponibilidad\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"OEE\"}, \"Name\": \"Medidas.OEE\", \"NativeReferenceName\": \"OEE\"}]}}}",
+          "config": "{\"name\": \"11fa079dd25a49fe85b0\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 145, \"z\": 12, \"width\": 600, \"height\": 270, \"tabOrder\": 12}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"dim_turno.turno\", \"active\": true}], \"Y\": [{\"queryRef\": \"Medidas.Disponibilidad\"}, {\"queryRef\": \"Medidas.OEE\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t\", \"Entity\": \"dim_turno\", \"Type\": 0}, {\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t\"}}, \"Property\": \"turno\"}, \"Name\": \"dim_turno.turno\", \"NativeReferenceName\": \"turno\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Disponibilidad\"}, \"Name\": \"Medidas.Disponibilidad\", \"NativeReferenceName\": \"Disponibilidad\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"OEE\"}, \"Name\": \"Medidas.OEE\", \"NativeReferenceName\": \"OEE\"}]}}}",
           "filters": "[]",
           "height": 270,
           "width": 600,
@@ -352,7 +271,7 @@
           "z": 12.0
         },
         {
-          "config": "{\"name\": \"601e785116080d650372\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 640, \"y\": 145, \"z\": 13, \"width\": 620, \"height\": 270, \"tabOrder\": 13}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"dim_maquina.maquina\", \"active\": true}], \"Y\": [{\"queryRef\": \"Medidas.Horas Paro\"}, {\"queryRef\": \"Medidas.Horas Sin Programar\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"dim_maquina\", \"Type\": 0}, {\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"maquina\"}, \"Name\": \"dim_maquina.maquina\", \"NativeReferenceName\": \"maquina\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Paro\"}, \"Name\": \"Medidas.Horas Paro\", \"NativeReferenceName\": \"Horas Paro\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Sin Programar\"}, \"Name\": \"Medidas.Horas Sin Programar\", \"NativeReferenceName\": \"Horas Sin Programar\"}]}}}",
+          "config": "{\"name\": \"1ba1c42b7170902a174f\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 640, \"y\": 145, \"z\": 13, \"width\": 620, \"height\": 270, \"tabOrder\": 13}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"dim_maquina.maquina\", \"active\": true}], \"Y\": [{\"queryRef\": \"Medidas.Horas Paro\"}, {\"queryRef\": \"Medidas.Horas Sin Programar\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"dim_maquina\", \"Type\": 0}, {\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"maquina\"}, \"Name\": \"dim_maquina.maquina\", \"NativeReferenceName\": \"maquina\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Paro\"}, \"Name\": \"Medidas.Horas Paro\", \"NativeReferenceName\": \"Horas Paro\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Sin Programar\"}, \"Name\": \"Medidas.Horas Sin Programar\", \"NativeReferenceName\": \"Horas Sin Programar\"}]}}}",
           "filters": "[]",
           "height": 270,
           "width": 620,
@@ -361,7 +280,7 @@
           "z": 13.0
         },
         {
-          "config": "{\"name\": \"65bdb57a6a1dfaf8cda9\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 430, \"z\": 14, \"width\": 1240, \"height\": 280, \"tabOrder\": 14}}], \"singleVisual\": {\"visualType\": \"pivotTable\", \"projections\": {\"Rows\": [{\"queryRef\": \"dim_maquina.maquina\", \"active\": true}], \"Columns\": [{\"queryRef\": \"dim_turno.turno\", \"active\": true}], \"Values\": [{\"queryRef\": \"Medidas.OEE\"}, {\"queryRef\": \"Medidas.Disponibilidad\"}, {\"queryRef\": \"Medidas.Horas Paro\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"dim_maquina\", \"Type\": 0}, {\"Name\": \"t\", \"Entity\": \"dim_turno\", \"Type\": 0}, {\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"maquina\"}, \"Name\": \"dim_maquina.maquina\", \"NativeReferenceName\": \"maquina\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t\"}}, \"Property\": \"turno\"}, \"Name\": \"dim_turno.turno\", \"NativeReferenceName\": \"turno\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"OEE\"}, \"Name\": \"Medidas.OEE\", \"NativeReferenceName\": \"OEE\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Disponibilidad\"}, \"Name\": \"Medidas.Disponibilidad\", \"NativeReferenceName\": \"Disponibilidad\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Paro\"}, \"Name\": \"Medidas.Horas Paro\", \"NativeReferenceName\": \"Horas Paro\"}]}}}",
+          "config": "{\"name\": \"d8b91b98fbe466809a11\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 430, \"z\": 14, \"width\": 1240, \"height\": 280, \"tabOrder\": 14}}], \"singleVisual\": {\"visualType\": \"pivotTable\", \"projections\": {\"Rows\": [{\"queryRef\": \"dim_maquina.maquina\", \"active\": true}], \"Columns\": [{\"queryRef\": \"dim_turno.turno\", \"active\": true}], \"Values\": [{\"queryRef\": \"Medidas.OEE\"}, {\"queryRef\": \"Medidas.Disponibilidad\"}, {\"queryRef\": \"Medidas.Horas Paro\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"dim_maquina\", \"Type\": 0}, {\"Name\": \"t\", \"Entity\": \"dim_turno\", \"Type\": 0}, {\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"maquina\"}, \"Name\": \"dim_maquina.maquina\", \"NativeReferenceName\": \"maquina\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t\"}}, \"Property\": \"turno\"}, \"Name\": \"dim_turno.turno\", \"NativeReferenceName\": \"turno\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"OEE\"}, \"Name\": \"Medidas.OEE\", \"NativeReferenceName\": \"OEE\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Disponibilidad\"}, \"Name\": \"Medidas.Disponibilidad\", \"NativeReferenceName\": \"Disponibilidad\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Paro\"}, \"Name\": \"Medidas.Horas Paro\", \"NativeReferenceName\": \"Horas Paro\"}]}}}",
           "filters": "[]",
           "height": 280,
           "width": 1240,
@@ -382,88 +301,61 @@
       "ordinal": 3,
       "visualContainers": [
         {
-          "config": "{\"name\": \"1dd3623d8eb7a4ca83b2\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 8, \"z\": 0, \"width\": 170, \"height\": 32, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"actionButton\", \"drillFilterOtherVisuals\": true, \"objects\": {\"icon\": [{\"properties\": {\"shapeType\": {\"expr\": {\"Literal\": {\"Value\": \"'blank'\"}}}}}], \"text\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Resumen'\"}}}}}]}, \"vcObjects\": {\"visualLink\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"type\": {\"expr\": {\"Literal\": {\"Value\": \"'PageNavigation'\"}}}, \"navigationSection\": {\"expr\": {\"Literal\": {\"Value\": \"'8f4ddda1494c73cf256d'\"}}}}}]}}}",
+          "config": "{\"name\": \"7ca0cc099a1e77064c2c\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 8, \"z\": 0, \"width\": 760, \"height\": 34, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"pageNavigator\", \"drillFilterOtherVisuals\": true}}",
           "filters": "[]",
-          "height": 32,
-          "width": 170,
+          "height": 34,
+          "width": 760,
           "x": 20,
           "y": 8,
           "z": 0.0
         },
         {
-          "config": "{\"name\": \"fd746bb6a3de65151c40\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 200, \"y\": 8, \"z\": 1, \"width\": 170, \"height\": 32, \"tabOrder\": 1}}], \"singleVisual\": {\"visualType\": \"actionButton\", \"drillFilterOtherVisuals\": true, \"objects\": {\"icon\": [{\"properties\": {\"shapeType\": {\"expr\": {\"Literal\": {\"Value\": \"'blank'\"}}}}}], \"text\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Paros'\"}}}}}]}, \"vcObjects\": {\"visualLink\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"type\": {\"expr\": {\"Literal\": {\"Value\": \"'PageNavigation'\"}}}, \"navigationSection\": {\"expr\": {\"Literal\": {\"Value\": \"'c7fdec99108ddb5b5fab'\"}}}}}]}}}",
+          "config": "{\"name\": \"d8e90452ef05f542441d\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 50, \"z\": 10, \"width\": 170, \"height\": 60, \"tabOrder\": 10}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"dim_maquina.maquina\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"dim_maquina\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"maquina\"}, \"Name\": \"dim_maquina.maquina\", \"NativeReferenceName\": \"maquina\"}]}, \"objects\": {\"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Dropdown'\"}}}}}]}}}",
           "filters": "[]",
-          "height": 32,
-          "width": 170,
-          "x": 200,
-          "y": 8,
-          "z": 1.0
-        },
-        {
-          "config": "{\"name\": \"4511001edc8e367e5d6d\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 380, \"y\": 8, \"z\": 2, \"width\": 170, \"height\": 32, \"tabOrder\": 2}}], \"singleVisual\": {\"visualType\": \"actionButton\", \"drillFilterOtherVisuals\": true, \"objects\": {\"icon\": [{\"properties\": {\"shapeType\": {\"expr\": {\"Literal\": {\"Value\": \"'blank'\"}}}}}], \"text\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Máquinas y turnos'\"}}}}}]}, \"vcObjects\": {\"visualLink\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"type\": {\"expr\": {\"Literal\": {\"Value\": \"'PageNavigation'\"}}}, \"navigationSection\": {\"expr\": {\"Literal\": {\"Value\": \"'820173ab48767734d7c1'\"}}}}}]}}}",
-          "filters": "[]",
-          "height": 32,
-          "width": 170,
-          "x": 380,
-          "y": 8,
-          "z": 2.0
-        },
-        {
-          "config": "{\"name\": \"f990f88ece64dd44fd36\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 560, \"y\": 8, \"z\": 3, \"width\": 170, \"height\": 32, \"tabOrder\": 3}}], \"singleVisual\": {\"visualType\": \"actionButton\", \"drillFilterOtherVisuals\": true, \"objects\": {\"icon\": [{\"properties\": {\"shapeType\": {\"expr\": {\"Literal\": {\"Value\": \"'blank'\"}}}}}], \"text\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Comparativo anual'\"}}}}}]}, \"vcObjects\": {\"visualLink\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"type\": {\"expr\": {\"Literal\": {\"Value\": \"'PageNavigation'\"}}}, \"navigationSection\": {\"expr\": {\"Literal\": {\"Value\": \"'309d965eda32dae44550'\"}}}}}]}}}",
-          "filters": "[]",
-          "height": 32,
-          "width": 170,
-          "x": 560,
-          "y": 8,
-          "z": 3.0
-        },
-        {
-          "config": "{\"name\": \"68f9f6cdb2f803e0d681\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 50, \"z\": 10, \"width\": 170, \"height\": 80, \"tabOrder\": 10}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"dim_maquina.maquina\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"m\", \"Entity\": \"dim_maquina\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"maquina\"}, \"Name\": \"dim_maquina.maquina\", \"NativeReferenceName\": \"maquina\"}]}}}",
-          "filters": "[]",
-          "height": 80,
+          "height": 60,
           "width": 170,
           "x": 20,
           "y": 50,
           "z": 10.0
         },
         {
-          "config": "{\"name\": \"1e34ec3fbf4dc20ef164\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 210, \"y\": 50, \"z\": 11, \"width\": 190, \"height\": 80, \"tabOrder\": 11}}], \"singleVisual\": {\"visualType\": \"cardVisual\", \"projections\": {\"Data\": [{\"queryRef\": \"Medidas.Productividad P-MTO-22\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Productividad P-MTO-22\"}, \"Name\": \"Medidas.Productividad P-MTO-22\", \"NativeReferenceName\": \"Productividad P-MTO-22\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Productividad P-MTO-22\"}}}]}, \"hasDefaultSort\": true}}",
-          "filters": "[]",
-          "height": 80,
+          "config": "{\"name\": \"36a80023b682af5570ee\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 210, \"y\": 45, \"z\": 11, \"width\": 190, \"height\": 90, \"tabOrder\": 11}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Medidas.Productividad P-MTO-22\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Productividad P-MTO-22\"}, \"Name\": \"Medidas.Productividad P-MTO-22\", \"NativeReferenceName\": \"Productividad P-MTO-22\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}], \"categoryLabels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"9D\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Año 2024'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"9D\"}}}}}]}}}",
+          "filters": "[{\"name\": \"e907ed52a241\", \"expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"dim_fecha\"}}, \"Property\": \"anio\"}}, \"type\": \"Categorical\", \"filter\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"dim_fecha\", \"Type\": 0}], \"Where\": [{\"Condition\": {\"In\": {\"Expressions\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"anio\"}}], \"Values\": [[{\"Literal\": {\"Value\": \"2024L\"}}]]}}}]}, \"howCreated\": 1}]",
+          "height": 90,
           "width": 190,
           "x": 210,
-          "y": 50,
+          "y": 45,
           "z": 11.0
         },
         {
-          "config": "{\"name\": \"b4ff3f1347de2274ea18\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 410, \"y\": 50, \"z\": 12, \"width\": 190, \"height\": 80, \"tabOrder\": 12}}], \"singleVisual\": {\"visualType\": \"cardVisual\", \"projections\": {\"Data\": [{\"queryRef\": \"Medidas.Productividad Año Anterior\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Productividad Año Anterior\"}, \"Name\": \"Medidas.Productividad Año Anterior\", \"NativeReferenceName\": \"Productividad Año Anterior\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Productividad Año Anterior\"}}}]}, \"hasDefaultSort\": true}}",
-          "filters": "[]",
-          "height": 80,
+          "config": "{\"name\": \"601e785116080d650372\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 410, \"y\": 45, \"z\": 12, \"width\": 190, \"height\": 90, \"tabOrder\": 12}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Medidas.Productividad Año Anterior\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Productividad Año Anterior\"}, \"Name\": \"Medidas.Productividad Año Anterior\", \"NativeReferenceName\": \"Productividad Año Anterior\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}], \"categoryLabels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"9D\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Año 2024'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"9D\"}}}}}]}}}",
+          "filters": "[{\"name\": \"65bdb57a6a1d\", \"expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"dim_fecha\"}}, \"Property\": \"anio\"}}, \"type\": \"Categorical\", \"filter\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"dim_fecha\", \"Type\": 0}], \"Where\": [{\"Condition\": {\"In\": {\"Expressions\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"anio\"}}], \"Values\": [[{\"Literal\": {\"Value\": \"2024L\"}}]]}}}]}, \"howCreated\": 1}]",
+          "height": 90,
           "width": 190,
           "x": 410,
-          "y": 50,
+          "y": 45,
           "z": 12.0
         },
         {
-          "config": "{\"name\": \"0f5502cdf2af19de2bc1\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 610, \"y\": 50, \"z\": 13, \"width\": 190, \"height\": 80, \"tabOrder\": 13}}], \"singleVisual\": {\"visualType\": \"cardVisual\", \"projections\": {\"Data\": [{\"queryRef\": \"Medidas.Variación Productividad (pp)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Variación Productividad (pp)\"}, \"Name\": \"Medidas.Variación Productividad (pp)\", \"NativeReferenceName\": \"Variación Productividad (pp)\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Variación Productividad (pp)\"}}}]}, \"hasDefaultSort\": true}}",
-          "filters": "[]",
-          "height": 80,
+          "config": "{\"name\": \"90f512b2a4146b77730f\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 610, \"y\": 45, \"z\": 13, \"width\": 190, \"height\": 90, \"tabOrder\": 13}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Medidas.Variación Productividad (pp)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Variación Productividad (pp)\"}, \"Name\": \"Medidas.Variación Productividad (pp)\", \"NativeReferenceName\": \"Variación Productividad (pp)\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}], \"categoryLabels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"9D\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Año 2024'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"9D\"}}}}}]}}}",
+          "filters": "[{\"name\": \"c74c32d03fdd\", \"expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"dim_fecha\"}}, \"Property\": \"anio\"}}, \"type\": \"Categorical\", \"filter\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"dim_fecha\", \"Type\": 0}], \"Where\": [{\"Condition\": {\"In\": {\"Expressions\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"anio\"}}], \"Values\": [[{\"Literal\": {\"Value\": \"2024L\"}}]]}}}]}, \"howCreated\": 1}]",
+          "height": 90,
           "width": 190,
           "x": 610,
-          "y": 50,
+          "y": 45,
           "z": 13.0
         },
         {
-          "config": "{\"name\": \"7ca0cc099a1e77064c2c\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 810, \"y\": 50, \"z\": 14, \"width\": 190, \"height\": 80, \"tabOrder\": 14}}], \"singleVisual\": {\"visualType\": \"cardVisual\", \"projections\": {\"Data\": [{\"queryRef\": \"Medidas.OEE Año Anterior\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"OEE Año Anterior\"}, \"Name\": \"Medidas.OEE Año Anterior\", \"NativeReferenceName\": \"OEE Año Anterior\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"OEE Año Anterior\"}}}]}, \"hasDefaultSort\": true}}",
-          "filters": "[]",
-          "height": 80,
+          "config": "{\"name\": \"563e45100358acc6d8f2\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 810, \"y\": 45, \"z\": 14, \"width\": 190, \"height\": 90, \"tabOrder\": 14}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Medidas.OEE Año Anterior\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"OEE Año Anterior\"}, \"Name\": \"Medidas.OEE Año Anterior\", \"NativeReferenceName\": \"OEE Año Anterior\"}]}, \"objects\": {\"labels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"20D\"}}}}}], \"categoryLabels\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"9D\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Año 2024'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"9D\"}}}}}]}}}",
+          "filters": "[{\"name\": \"55244fab6f3e\", \"expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"dim_fecha\"}}, \"Property\": \"anio\"}}, \"type\": \"Categorical\", \"filter\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"dim_fecha\", \"Type\": 0}], \"Where\": [{\"Condition\": {\"In\": {\"Expressions\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"anio\"}}], \"Values\": [[{\"Literal\": {\"Value\": \"2024L\"}}]]}}}]}, \"howCreated\": 1}]",
+          "height": 90,
           "width": 190,
           "x": 810,
-          "y": 50,
+          "y": 45,
           "z": 14.0
         },
         {
-          "config": "{\"name\": \"8f2dae9ca08b2d7c5048\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 145, \"z\": 15, \"width\": 620, \"height\": 280, \"tabOrder\": 15}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Category\": [{\"queryRef\": \"dim_fecha.nombre_mes\", \"active\": true}], \"Series\": [{\"queryRef\": \"dim_fecha.anio\"}], \"Y\": [{\"queryRef\": \"Medidas.Productividad P-MTO-22\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"dim_fecha\", \"Type\": 0}, {\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"nombre_mes\"}, \"Name\": \"dim_fecha.nombre_mes\", \"NativeReferenceName\": \"nombre_mes\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"anio\"}, \"Name\": \"dim_fecha.anio\", \"NativeReferenceName\": \"anio\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Productividad P-MTO-22\"}, \"Name\": \"Medidas.Productividad P-MTO-22\", \"NativeReferenceName\": \"Productividad P-MTO-22\"}]}}}",
+          "config": "{\"name\": \"68f9f6cdb2f803e0d681\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 145, \"z\": 15, \"width\": 620, \"height\": 280, \"tabOrder\": 15}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Category\": [{\"queryRef\": \"dim_fecha.nombre_mes\", \"active\": true}], \"Series\": [{\"queryRef\": \"dim_fecha.anio\"}], \"Y\": [{\"queryRef\": \"Medidas.Productividad P-MTO-22\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"dim_fecha\", \"Type\": 0}, {\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"nombre_mes\"}, \"Name\": \"dim_fecha.nombre_mes\", \"NativeReferenceName\": \"nombre_mes\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"anio\"}, \"Name\": \"dim_fecha.anio\", \"NativeReferenceName\": \"anio\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Productividad P-MTO-22\"}, \"Name\": \"Medidas.Productividad P-MTO-22\", \"NativeReferenceName\": \"Productividad P-MTO-22\"}]}}}",
           "filters": "[]",
           "height": 280,
           "width": 620,
@@ -472,7 +364,7 @@
           "z": 15.0
         },
         {
-          "config": "{\"name\": \"8245728a6fcf303a07b2\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 660, \"y\": 145, \"z\": 16, \"width\": 600, \"height\": 280, \"tabOrder\": 16}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"dim_fecha.nombre_mes\", \"active\": true}], \"Y\": [{\"queryRef\": \"Medidas.Horas Paro\"}, {\"queryRef\": \"Medidas.Horas Paro Año Anterior\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"dim_fecha\", \"Type\": 0}, {\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"nombre_mes\"}, \"Name\": \"dim_fecha.nombre_mes\", \"NativeReferenceName\": \"nombre_mes\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Paro\"}, \"Name\": \"Medidas.Horas Paro\", \"NativeReferenceName\": \"Horas Paro\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Paro Año Anterior\"}, \"Name\": \"Medidas.Horas Paro Año Anterior\", \"NativeReferenceName\": \"Horas Paro Año Anterior\"}]}}}",
+          "config": "{\"name\": \"1e34ec3fbf4dc20ef164\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 660, \"y\": 145, \"z\": 16, \"width\": 600, \"height\": 280, \"tabOrder\": 16}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"dim_fecha.nombre_mes\", \"active\": true}], \"Y\": [{\"queryRef\": \"Medidas.Horas Paro\"}, {\"queryRef\": \"Medidas.Horas Paro Año Anterior\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"dim_fecha\", \"Type\": 0}, {\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"nombre_mes\"}, \"Name\": \"dim_fecha.nombre_mes\", \"NativeReferenceName\": \"nombre_mes\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Paro\"}, \"Name\": \"Medidas.Horas Paro\", \"NativeReferenceName\": \"Horas Paro\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Paro Año Anterior\"}, \"Name\": \"Medidas.Horas Paro Año Anterior\", \"NativeReferenceName\": \"Horas Paro Año Anterior\"}]}}}",
           "filters": "[]",
           "height": 280,
           "width": 600,
@@ -481,7 +373,7 @@
           "z": 16.0
         },
         {
-          "config": "{\"name\": \"bb5dfc3b66fa30d0b194\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 440, \"z\": 17, \"width\": 620, \"height\": 270, \"tabOrder\": 17}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Category\": [{\"queryRef\": \"dim_fecha.nombre_mes\", \"active\": true}], \"Series\": [{\"queryRef\": \"dim_fecha.anio\"}], \"Y\": [{\"queryRef\": \"Medidas.Pacas Acumuladas Año (YTD)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"dim_fecha\", \"Type\": 0}, {\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"nombre_mes\"}, \"Name\": \"dim_fecha.nombre_mes\", \"NativeReferenceName\": \"nombre_mes\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"anio\"}, \"Name\": \"dim_fecha.anio\", \"NativeReferenceName\": \"anio\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Pacas Acumuladas Año (YTD)\"}, \"Name\": \"Medidas.Pacas Acumuladas Año (YTD)\", \"NativeReferenceName\": \"Pacas Acumuladas Año (YTD)\"}]}}}",
+          "config": "{\"name\": \"b4ff3f1347de2274ea18\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 440, \"z\": 17, \"width\": 620, \"height\": 270, \"tabOrder\": 17}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Category\": [{\"queryRef\": \"dim_fecha.nombre_mes\", \"active\": true}], \"Series\": [{\"queryRef\": \"dim_fecha.anio\"}], \"Y\": [{\"queryRef\": \"Medidas.Pacas Acumuladas Año (YTD)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"dim_fecha\", \"Type\": 0}, {\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"nombre_mes\"}, \"Name\": \"dim_fecha.nombre_mes\", \"NativeReferenceName\": \"nombre_mes\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"anio\"}, \"Name\": \"dim_fecha.anio\", \"NativeReferenceName\": \"anio\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Pacas Acumuladas Año (YTD)\"}, \"Name\": \"Medidas.Pacas Acumuladas Año (YTD)\", \"NativeReferenceName\": \"Pacas Acumuladas Año (YTD)\"}]}}}",
           "filters": "[]",
           "height": 270,
           "width": 620,
@@ -490,7 +382,7 @@
           "z": 17.0
         },
         {
-          "config": "{\"name\": \"6b5221870f0bc4ff64de\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 660, \"y\": 440, \"z\": 18, \"width\": 600, \"height\": 270, \"tabOrder\": 18}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Category\": [{\"queryRef\": \"dim_fecha.nombre_mes\", \"active\": true}], \"Y\": [{\"queryRef\": \"Medidas.Horas Paro\"}, {\"queryRef\": \"Medidas.Promedio Móvil 3 Meses Horas Paro\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"dim_fecha\", \"Type\": 0}, {\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"nombre_mes\"}, \"Name\": \"dim_fecha.nombre_mes\", \"NativeReferenceName\": \"nombre_mes\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Paro\"}, \"Name\": \"Medidas.Horas Paro\", \"NativeReferenceName\": \"Horas Paro\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Promedio Móvil 3 Meses Horas Paro\"}, \"Name\": \"Medidas.Promedio Móvil 3 Meses Horas Paro\", \"NativeReferenceName\": \"Promedio Móvil 3 Meses Horas Paro\"}]}}}",
+          "config": "{\"name\": \"0f5502cdf2af19de2bc1\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 660, \"y\": 440, \"z\": 18, \"width\": 600, \"height\": 270, \"tabOrder\": 18}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Category\": [{\"queryRef\": \"dim_fecha.nombre_mes\", \"active\": true}], \"Y\": [{\"queryRef\": \"Medidas.Horas Paro\"}, {\"queryRef\": \"Medidas.Promedio Móvil 3 Meses Horas Paro\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"d\", \"Entity\": \"dim_fecha\", \"Type\": 0}, {\"Name\": \"k\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"d\"}}, \"Property\": \"nombre_mes\"}, \"Name\": \"dim_fecha.nombre_mes\", \"NativeReferenceName\": \"nombre_mes\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Horas Paro\"}, \"Name\": \"Medidas.Horas Paro\", \"NativeReferenceName\": \"Horas Paro\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"k\"}}, \"Property\": \"Promedio Móvil 3 Meses Horas Paro\"}, \"Name\": \"Medidas.Promedio Móvil 3 Meses Horas Paro\", \"NativeReferenceName\": \"Promedio Móvil 3 Meses Horas Paro\"}]}}}",
           "filters": "[]",
           "height": 270,
           "width": 600,
