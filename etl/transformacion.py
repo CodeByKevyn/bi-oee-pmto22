@@ -140,20 +140,27 @@ def limpiar(base, catalogos, sal):
     df = df.drop(columns=["Unidades_producidas_cada_minuto", "Display_por_paca", "Unidad_por_display"])
     rep["R1_columnas_descartadas"] = 3
 
+    for c in ("Pacas_producidas", "Horas_trabajadas", "Horas_no_trabajadas", "Tiempo_de_Paro"):
+        df[c] = pd.to_numeric(df[c], errors="coerce")
+
+    def sumas(x):
+        return {"horas_programadas": float(x["Horas_trabajadas"].fillna(0).sum()), "pacas": float(x["Pacas_producidas"].fillna(0).sum()),
+                "horas_no_trabajadas": float(x["Horas_no_trabajadas"].fillna(0).sum()), "horas_paro": float(x["Tiempo_de_Paro"].fillna(0).sum())}
+
     # R2: duplicados exactos de la fila completa
     cols = [c for c in df.columns if c != "fila_excel"]
     dup = df.duplicated(cols, keep="first")
     rep["R2_duplicados_exactos"] = int(dup.sum())
+    desc2 = sumas(df[dup])
     df = df[~dup].copy()
-
-    for c in ("Pacas_producidas", "Horas_trabajadas", "Horas_no_trabajadas", "Tiempo_de_Paro"):
-        df[c] = pd.to_numeric(df[c], errors="coerce")
 
     # R3: filas de relleno (sin horas, sin pacas, sin paro y sin horas sin trabajar)
     sin_programar = df["Horas_no_trabajadas"].fillna(0) > 0
     vacia = df["Horas_trabajadas"].isna() & df["Pacas_producidas"].isna() & (df["Tiempo_de_Paro"].fillna(0) == 0) & ~sin_programar
     rep["R3_filas_vacias"] = int(vacia.sum())
+    desc3 = sumas(df[vacia])
     df = df[~vacia].copy()
+    rep["descartado"] = {k: desc2[k] + desc3[k] for k in desc2}
 
     # R4: textos
     df["maquina"] = df["Maquina"].map(_texto)
