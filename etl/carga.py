@@ -12,7 +12,8 @@ from etl.transformacion import _texto, seudonimo
 
 RAIZ = Path(__file__).resolve().parent.parent
 SQL_DIR = RAIZ / "sql"
-SCRIPTS_DDL = ["01_esquemas.sql", "02_staging.sql", "03_dimensiones.sql", "04_hechos.sql", "05_tiempo_real.sql", "06_indices.sql"]
+SCRIPTS_DDL = ["01_esquemas.sql", "02_staging.sql", "03_dimensiones.sql", "04_hechos.sql", "05_tiempo_real.sql", "06_indices.sql",
+               "07_vistas.sql", "10_tiempo_real_vistas.sql", "11_permisos.sql"]
 
 
 def cargar_env():
