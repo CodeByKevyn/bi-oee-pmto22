@@ -13,12 +13,12 @@ CREATE TABLE IF NOT EXISTS dwh.fact_produccion_turno (
     horas_no_trabajadas numeric(6,2) NOT NULL CHECK (horas_no_trabajadas >= 0),
     tipo_no_trabajo_codigo smallint,
     tipo_no_trabajo text,
-    horas_paro_turno numeric(8,4) NOT NULL,
-    horas_paro_programado numeric(8,4) NOT NULL,
-    horas_paro_calidad numeric(8,4) NOT NULL,
-    horas_paro_disponibilidad numeric(8,4) NOT NULL,
-    horas_programadas_netas numeric(8,4) NOT NULL,
-    horas_operativas numeric(8,4) NOT NULL,
+    horas_paro_turno numeric(12,6) NOT NULL,
+    horas_paro_programado numeric(12,6) NOT NULL,
+    horas_paro_calidad numeric(12,6) NOT NULL,
+    horas_paro_disponibilidad numeric(12,6) NOT NULL,
+    horas_programadas_netas numeric(12,6) NOT NULL,
+    horas_operativas numeric(12,6) NOT NULL,
     meta_pacas_hora numeric(8,3) NOT NULL,
     pacas_ideales numeric(12,3) NOT NULL,
     es_atipico boolean NOT NULL DEFAULT false,
@@ -38,5 +38,5 @@ CREATE TABLE IF NOT EXISTS dwh.fact_paro (
     paro_key int NOT NULL REFERENCES dwh.dim_paro,
     personal_involucrado_key int NOT NULL REFERENCES dwh.dim_personal,
     minutos_paro numeric(8,2) NOT NULL CHECK (minutos_paro > 0),
-    horas_paro numeric(8,4) GENERATED ALWAYS AS (minutos_paro / 60.0) STORED
+    horas_paro numeric(14,8) GENERATED ALWAYS AS (minutos_paro / 60.0) STORED
 );
