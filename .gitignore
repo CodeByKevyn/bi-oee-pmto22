@@ -1,0 +1,22 @@
+# credenciales
+.env
+*.env
+!.env.example
+
+# datos de origen (traen nombres de personas)
+data/raw/*
+!data/raw/.gitkeep
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# power bi
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+
+# otros
+*.log
+.DS_Store
