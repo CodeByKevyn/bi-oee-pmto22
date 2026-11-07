@@ -66,4 +66,24 @@ La navegación es con cuatro botones iguales en la parte superior de cada págin
 
 El proyecto se abrió en Power BI Desktop sin errores del modelo ni del informe (el panel de problemas quedó en cero) y se actualizó contra una base PostgreSQL con los datos cargados por el ETL. Las medidas se contrastaron con el SQL: la productividad por año (87,7 %, 79,2 %, 72,6 % y 70,2 %), el MTTR y el MTBF por máquina dan los mismos valores que las consultas 3 y 9. Los datos se cargan al actualizar con las credenciales del equipo de cada persona.
 
-Las capturas de las cuatro páginas están en el documento de entrega.
+Capturas de Power BI Desktop con los datos cargados desde PostgreSQL.
+
+Resumen:
+
+![Resumen](img/pbi_resumen.png)
+
+Paros, con la jerarquía desplegada de área de impacto a código y a subcódigo:
+
+![Paros](img/pbi_paros.png)
+
+Máquinas y turnos:
+
+![Máquinas y turnos](img/pbi_maquinas_turnos.png)
+
+Comparativo anual (las tarjetas están fijadas a 2024 contra 2023):
+
+![Comparativo anual](img/pbi_comparativo.png)
+
+Vista de modelo, con las relaciones del esquema en estrella:
+
+![Modelo](img/pbi_modelo.png)
