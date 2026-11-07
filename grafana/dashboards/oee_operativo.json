@@ -1,0 +1,476 @@
+{
+  "uid": "bi-oee-operativo",
+  "title": "Monitoreo operativo de las líneas de envasado",
+  "description": "Lecturas hora a hora de Vinilos_1 a Vinilos_4 (rt.lectura_hora). Se llena con etl/simulador_hora.py.",
+  "tags": [
+    "oee",
+    "envasado"
+  ],
+  "timezone": "America/Bogota",
+  "editable": true,
+  "graphTooltip": 1,
+  "refresh": "5s",
+  "schemaVersion": 41,
+  "version": 1,
+  "time": {
+    "from": "now-24h",
+    "to": "now+12h"
+  },
+  "templating": {
+    "list": [
+      {
+        "name": "maquina",
+        "label": "Máquina",
+        "type": "query",
+        "datasource": {
+          "type": "grafana-postgresql-datasource",
+          "uid": "bi-oee-pg"
+        },
+        "query": "SELECT DISTINCT maquina FROM rt.lectura_hora ORDER BY 1",
+        "definition": "SELECT DISTINCT maquina FROM rt.lectura_hora ORDER BY 1",
+        "refresh": 2,
+        "includeAll": true,
+        "multi": true,
+        "sort": 1,
+        "current": {
+          "selected": true,
+          "text": [
+            "All"
+          ],
+          "value": [
+            "$__all"
+          ]
+        },
+        "options": []
+      },
+      {
+        "name": "turno",
+        "label": "Turno",
+        "type": "query",
+        "datasource": {
+          "type": "grafana-postgresql-datasource",
+          "uid": "bi-oee-pg"
+        },
+        "query": "SELECT DISTINCT turno FROM rt.lectura_hora ORDER BY 1",
+        "definition": "SELECT DISTINCT turno FROM rt.lectura_hora ORDER BY 1",
+        "refresh": 2,
+        "includeAll": true,
+        "multi": true,
+        "sort": 1,
+        "current": {
+          "selected": true,
+          "text": [
+            "All"
+          ],
+          "value": [
+            "$__all"
+          ]
+        },
+        "options": []
+      }
+    ]
+  },
+  "panels": [
+    {
+      "id": 1,
+      "type": "stat",
+      "title": "Estado actual por máquina",
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "bi-oee-pg"
+      },
+      "description": "Minutos de paro de la última hora registrada. Verde: produce. Naranja: 15 min o más de paro. Rojo: 45 min o más (parada).",
+      "gridPos": {
+        "h": 6,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-postgresql-datasource",
+            "uid": "bi-oee-pg"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT maquina AS \"Máquina\", minutos_paro AS \"Minutos de paro\"\nFROM rt.v_estado_actual\nWHERE maquina IN ($maquina)\nORDER BY 1",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none",
+          "decimals": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "orange",
+                "value": 15
+              },
+              {
+                "color": "red",
+                "value": 45
+              }
+            ]
+          },
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "type": "range",
+              "options": {
+                "from": 0,
+                "to": 14.99,
+                "result": {
+                  "text": "Produciendo",
+                  "index": 0
+                }
+              }
+            },
+            {
+              "type": "range",
+              "options": {
+                "from": 15,
+                "to": 44.99,
+                "result": {
+                  "text": "Con paros",
+                  "index": 1
+                }
+              }
+            },
+            {
+              "type": "range",
+              "options": {
+                "from": 45,
+                "to": 60,
+                "result": {
+                  "text": "Parada",
+                  "index": 2
+                }
+              }
+            }
+          ]
+        },
+        "overrides": []
+      },
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "textMode": "value_and_name",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "",
+          "values": true
+        }
+      }
+    },
+    {
+      "id": 2,
+      "type": "timeseries",
+      "title": "Cumplimiento de la meta por hora (%)",
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "bi-oee-pg"
+      },
+      "description": "Pacas producidas sobre la meta de cada máquina. La línea punteada marca el 70 %.",
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 6
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-postgresql-datasource",
+            "uid": "bi-oee-pg"
+          },
+          "editorMode": "code",
+          "format": "time_series",
+          "rawQuery": true,
+          "rawSql": "SELECT ts AS \"time\", maquina AS metric, ROUND(100 * pacas / NULLIF(meta_pacas, 0), 1) AS \"Cumplimiento (%)\"\nFROM rt.lectura_hora\nWHERE $__timeFilter(ts) AND maquina IN ($maquina) AND turno IN ($turno)\nORDER BY 1",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percent",
+          "min": 0,
+          "max": 130,
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 2,
+            "fillOpacity": 0,
+            "showPoints": "auto",
+            "axisLabel": "% de la meta",
+            "thresholdsStyle": {
+              "mode": "dashed"
+            }
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 70
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "type": "timeseries",
+      "title": "Minutos de paro por hora",
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "bi-oee-pg"
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 12,
+        "y": 6
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-postgresql-datasource",
+            "uid": "bi-oee-pg"
+          },
+          "editorMode": "code",
+          "format": "time_series",
+          "rawQuery": true,
+          "rawSql": "SELECT ts AS \"time\", maquina AS metric, minutos_paro AS \"Minutos de paro\"\nFROM rt.lectura_hora\nWHERE $__timeFilter(ts) AND maquina IN ($maquina) AND turno IN ($turno)\nORDER BY 1",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "none",
+          "min": 0,
+          "max": 60,
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "drawStyle": "bars",
+            "fillOpacity": 70,
+            "lineWidth": 1,
+            "axisLabel": "min",
+            "stacking": {
+              "mode": "none"
+            }
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "type": "gauge",
+      "title": "Paro en las últimas 3 horas (%)",
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "bi-oee-pg"
+      },
+      "description": "Es el valor que vigila la alerta: sobre 50 % se dispara.",
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 15
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-postgresql-datasource",
+            "uid": "bi-oee-pg"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT maquina AS \"Máquina\", paro_pct AS \"Paro 3 h (%)\"\nFROM rt.v_ultimas_3h\nWHERE maquina IN ($maquina)\nORDER BY 1",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "percent",
+          "min": 0,
+          "max": 100,
+          "decimals": 1,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "orange",
+                "value": 30
+              },
+              {
+                "color": "red",
+                "value": 50
+              }
+            ]
+          },
+          "color": {
+            "mode": "thresholds"
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "showThresholdMarkers": true,
+        "showThresholdLabels": false,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "",
+          "values": true
+        }
+      }
+    },
+    {
+      "id": 5,
+      "type": "table",
+      "title": "Paros por código en el rango de tiempo",
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "bi-oee-pg"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 15
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-postgresql-datasource",
+            "uid": "bi-oee-pg"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT c.nombre_codigo AS \"Código\", COUNT(*) AS \"Horas con paro\", ROUND(SUM(l.minutos_paro)) AS \"Minutos\"\nFROM rt.lectura_hora l\nJOIN dwh.v_codigos c ON c.codigo = l.codigo_paro\nWHERE $__timeFilter(l.ts) AND l.maquina IN ($maquina) AND l.turno IN ($turno)\nGROUP BY 1\nORDER BY 3 DESC",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": "auto"
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Minutos"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "gauge",
+                  "mode": "basic"
+                }
+              },
+              {
+                "id": "color",
+                "value": {
+                  "mode": "fixed",
+                  "fixedColor": "orange"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "options": {
+        "showHeader": true,
+        "cellHeight": "sm"
+      }
+    },
+    {
+      "id": 6,
+      "type": "alertlist",
+      "title": "Estado de las alertas",
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "bi-oee-pg"
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 24,
+        "x": 0,
+        "y": 23
+      },
+      "options": {
+        "alertInstanceLabelFilter": "",
+        "alertName": "",
+        "dashboardAlerts": false,
+        "groupBy": [],
+        "groupMode": "default",
+        "maxItems": 20,
+        "sortOrder": 1,
+        "stateFilter": {
+          "error": true,
+          "firing": true,
+          "noData": false,
+          "normal": true,
+          "pending": true
+        },
+        "viewMode": "list",
+        "folder": null
+      },
+      "targets": []
+    }
+  ]
+}
