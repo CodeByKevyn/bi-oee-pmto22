@@ -26,8 +26,15 @@
   "minutos_paro_cargados": 505892.1,
   "eventos_con_subcodigo_no_reconocido": 0,
   "paro_horas_sin_fila_de_produccion": 57.92,
+  "referencia_por_defecto": {
+    "Vinilos_1": "Parchesitos 30cc (12 col)",
+    "Vinilos_2": "Parchesitos 125cc",
+    "Vinilos_3": "Parchesitos 22cc (6 col)",
+    "Vinilos_4": "Torre 22cc (6 col)"
+  },
   "produccion_con_meta_estimada": 4146,
   "produccion_sin_referencia": 4047,
+  "filas_que_entran_al_oee": 2427,
   "conciliacion": [
     {
       "indicador": "horas_programadas",
