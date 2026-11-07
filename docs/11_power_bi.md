@@ -53,7 +53,7 @@ El Pareto acumulado suma las horas de los códigos que tienen igual o más horas
 
 ## Páginas
 
-La navegación es con cuatro botones iguales en la parte superior de cada página.
+La navegación es con el visual Navegador de páginas, en la parte superior de cada página: marca la página actual y cambia de página con Ctrl + clic en Desktop o con un clic en el servicio.
 
 | Página | Qué muestra | Pregunta que responde |
 |---|---|---|
