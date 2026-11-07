@@ -1,0 +1,104 @@
+table fact_paro
+	lineageTag: ddbc8ddd-b8d0-465d-9955-bf313473f51f
+
+	column fecha_key
+		dataType: int64
+		formatString: 0
+		lineageTag: ec9a5dc8-a440-4745-8c5d-cd5fd17f17d2
+		isHidden
+		summarizeBy: none
+		sourceColumn: fecha_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column maquina_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 3e06d750-369a-4ad7-9f9c-a6ceb7b8b1a0
+		isHidden
+		summarizeBy: none
+		sourceColumn: maquina_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column turno_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 167cd62e-fb01-4964-a3e5-a05be665559b
+		isHidden
+		summarizeBy: none
+		sourceColumn: turno_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column referencia_key
+		dataType: int64
+		formatString: 0
+		lineageTag: fa0c31f6-8975-4cdb-8f52-d3fefa342b15
+		isHidden
+		summarizeBy: none
+		sourceColumn: referencia_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column personal_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 430ac631-5205-4395-aea9-3b6fca71067b
+		isHidden
+		summarizeBy: none
+		sourceColumn: personal_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column paro_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 040182fc-db14-4009-b7e0-6d03e8f51608
+		isHidden
+		summarizeBy: none
+		sourceColumn: paro_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column personal_involucrado_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 0981abb6-1530-459b-8135-47e25937c1f0
+		isHidden
+		summarizeBy: none
+		sourceColumn: personal_involucrado_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column minutos_paro
+		dataType: double
+		formatString: #,0.0
+		lineageTag: 6be1fcde-8ce0-4658-9790-db4f70dee693
+		summarizeBy: none
+		sourceColumn: minutos_paro
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas_paro
+		dataType: double
+		formatString: #,0.00
+		lineageTag: eb754412-7cc9-4bc2-8677-3aadc4aaf35a
+		summarizeBy: none
+		sourceColumn: horas_paro
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_paro = m
+		mode: import
+		source = ```
+			let
+			    Origen = PostgreSQL.Database(Servidor, BaseDeDatos),
+			    Tabla = Origen{[Schema = "dwh", Item = "fact_paro"]}[Data],
+			    Columnas = Table.SelectColumns(Tabla, {"fecha_key", "maquina_key", "turno_key", "referencia_key", "personal_key", "paro_key", "personal_involucrado_key", "minutos_paro", "horas_paro"}),
+			    Tipos = Table.TransformColumnTypes(Columnas, {{"fecha_key", Int64.Type}, {"maquina_key", Int64.Type}, {"turno_key", Int64.Type}, {"referencia_key", Int64.Type}, {"personal_key", Int64.Type}, {"paro_key", Int64.Type}, {"personal_involucrado_key", Int64.Type}, {"minutos_paro", type number}, {"horas_paro", type number}})
+			in
+			    Tipos
+			```
+
+	annotation PBI_ResultType = Table

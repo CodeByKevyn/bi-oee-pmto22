@@ -1,0 +1,49 @@
+relationship 7108e022-3697-4e1b-a577-c1ecfd42e044
+	fromColumn: fact_produccion_turno.fecha_key
+	toColumn: dim_fecha.fecha_key
+
+relationship 9c3ecb54-c5ce-4dd8-8273-85c9421e7a60
+	fromColumn: fact_produccion_turno.maquina_key
+	toColumn: dim_maquina.maquina_key
+
+relationship 62dc08d6-4bdb-4090-948d-d9f354366c21
+	fromColumn: fact_produccion_turno.turno_key
+	toColumn: dim_turno.turno_key
+
+relationship 356f8bd1-1711-4b57-9304-145212ca3f70
+	fromColumn: fact_produccion_turno.referencia_key
+	toColumn: dim_referencia.referencia_key
+
+relationship 03f8670d-3e36-4858-a2f7-647a952e1b8b
+	fromColumn: fact_produccion_turno.personal_key
+	toColumn: dim_personal.personal_key
+
+relationship 9f452c07-5f27-4f08-9e61-7f8e99edbce7
+	fromColumn: fact_paro.fecha_key
+	toColumn: dim_fecha.fecha_key
+
+relationship 965768e0-f589-499a-a091-8fa774057241
+	fromColumn: fact_paro.maquina_key
+	toColumn: dim_maquina.maquina_key
+
+relationship 22bfb8e0-9317-49fd-9515-7e9d7bd55ee6
+	fromColumn: fact_paro.turno_key
+	toColumn: dim_turno.turno_key
+
+relationship a0931ed4-2ecd-4c0a-a2d7-4145ddd4a054
+	fromColumn: fact_paro.referencia_key
+	toColumn: dim_referencia.referencia_key
+
+relationship 3a775505-e88e-452f-8f91-540c27756991
+	fromColumn: fact_paro.personal_key
+	toColumn: dim_personal.personal_key
+
+relationship b9b338eb-3fdf-4348-9c46-1cb5d15b77f2
+	fromColumn: fact_paro.paro_key
+	toColumn: dim_paro.paro_key
+
+relationship a104a795-bd4a-4ab0-a891-dd3c3096c6c8
+	isActive: false
+	fromColumn: fact_paro.personal_involucrado_key
+	toColumn: dim_personal.personal_key
+

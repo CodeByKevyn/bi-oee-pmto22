@@ -1,0 +1,53 @@
+table dim_personal
+	lineageTag: 84b58297-33db-4aab-9c9c-2d91ad9a6296
+
+	column personal_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 57afaba6-e7dd-4eed-80f7-27ad2b6b5fce
+		isHidden
+		summarizeBy: none
+		sourceColumn: personal_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column alias
+		dataType: string
+		lineageTag: 7f914fe8-7122-4cb2-ae28-3c1ea8f51ac5
+		summarizeBy: none
+		sourceColumn: alias
+
+		annotation SummarizationSetBy = Automatic
+
+	column rol
+		dataType: string
+		lineageTag: 679e2a61-53b3-40ff-bdd1-e044e448373c
+		summarizeBy: none
+		sourceColumn: rol
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Jerarquía de personal'
+		lineageTag: a2592b9d-32d1-464e-8027-46a4aa785c61
+
+		level rol
+			lineageTag: c12f694d-ce55-4174-8dc0-2ecd6e4f2724
+			column: rol
+
+		level alias
+			lineageTag: 36d51bff-e159-4dc4-b346-5430ea0a668a
+			column: alias
+
+	partition dim_personal = m
+		mode: import
+		source = ```
+			let
+			    Origen = PostgreSQL.Database(Servidor, BaseDeDatos),
+			    Tabla = Origen{[Schema = "dwh", Item = "dim_personal"]}[Data],
+			    Columnas = Table.SelectColumns(Tabla, {"personal_key", "alias", "rol"}),
+			    Tipos = Table.TransformColumnTypes(Columnas, {{"personal_key", Int64.Type}, {"alias", type text}, {"rol", type text}})
+			in
+			    Tipos
+			```
+
+	annotation PBI_ResultType = Table

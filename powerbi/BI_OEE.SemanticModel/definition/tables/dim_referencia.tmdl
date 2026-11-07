@@ -1,0 +1,109 @@
+table dim_referencia
+	lineageTag: a98a372e-9ffd-4a18-83b8-676692a38328
+
+	column referencia_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 032fbce3-952a-41b2-a111-b4b561e09c2f
+		isHidden
+		summarizeBy: none
+		sourceColumn: referencia_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column referencia
+		dataType: string
+		lineageTag: 1734bc44-1488-4edc-927e-eabe9bdeb398
+		summarizeBy: none
+		sourceColumn: referencia
+
+		annotation SummarizationSetBy = Automatic
+
+	column marca
+		dataType: string
+		lineageTag: 41d812cd-fe4a-4ce0-9d96-ac56a3b00043
+		summarizeBy: none
+		sourceColumn: marca
+
+		annotation SummarizationSetBy = Automatic
+
+	column tamano_cc
+		dataType: int64
+		formatString: 0
+		lineageTag: 5484b3db-ba6b-477c-aa8f-1dd4e13a0996
+		summarizeBy: none
+		sourceColumn: tamano_cc
+
+		annotation SummarizationSetBy = Automatic
+
+	column colores
+		dataType: int64
+		formatString: 0
+		lineageTag: b1b43d07-bc2b-45cd-af2b-1ae56370903f
+		summarizeBy: none
+		sourceColumn: colores
+
+		annotation SummarizationSetBy = Automatic
+
+	column display_por_paca
+		dataType: int64
+		formatString: 0
+		lineageTag: 766e6900-70c6-4508-b52f-7bd994b953ed
+		summarizeBy: none
+		sourceColumn: display_por_paca
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidades_por_paca
+		dataType: int64
+		formatString: 0
+		lineageTag: 84c955f1-1572-4073-8a8f-7aefd69f6b16
+		summarizeBy: none
+		sourceColumn: unidades_por_paca
+
+		annotation SummarizationSetBy = Automatic
+
+	column en_maestro
+		dataType: boolean
+		lineageTag: 4f6b8f60-07a0-4e64-83b8-52d7c00dc63d
+		summarizeBy: none
+		sourceColumn: en_maestro
+
+		annotation SummarizationSetBy = Automatic
+
+	column es_vigente
+		dataType: boolean
+		lineageTag: 05b4d756-7b1f-4c6a-9675-9ecb99edd4d1
+		summarizeBy: none
+		sourceColumn: es_vigente
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Jerarquía de referencias'
+		lineageTag: 1ce606fd-b2c6-4fdd-b517-e3823aefce2e
+
+		level marca
+			lineageTag: a8fe622a-9d50-45e5-87aa-8cf37f4bd052
+			column: marca
+
+		level tamano_cc
+			lineageTag: e57bae11-417e-46c9-bc7d-faf5eba38bf6
+			column: tamano_cc
+
+		level referencia
+			lineageTag: 24aa1734-4d10-49ab-9e32-0f4a02e50777
+			column: referencia
+
+	partition dim_referencia = m
+		mode: import
+		source = ```
+			let
+			    Origen = PostgreSQL.Database(Servidor, BaseDeDatos),
+			    Tabla = Origen{[Schema = "dwh", Item = "dim_referencia"]}[Data],
+			    Columnas = Table.SelectColumns(Tabla, {"referencia_key", "referencia", "marca", "tamano_cc", "colores", "display_por_paca", "unidades_por_paca", "en_maestro", "es_vigente"}),
+			    Tipos = Table.TransformColumnTypes(Columnas, {{"referencia_key", Int64.Type}, {"referencia", type text}, {"marca", type text}, {"tamano_cc", Int64.Type}, {"colores", Int64.Type}, {"display_por_paca", Int64.Type}, {"unidades_por_paca", Int64.Type}, {"en_maestro", type logical}, {"es_vigente", type logical}})
+			in
+			    Tipos
+			```
+
+	annotation PBI_ResultType = Table

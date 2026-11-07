@@ -1,0 +1,62 @@
+table dim_turno
+	lineageTag: 73fdc194-1344-4df8-928a-e84affd5e6d8
+
+	column turno_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 0b620dc6-bcac-4462-9e26-8fa08bcce7cd
+		isHidden
+		summarizeBy: none
+		sourceColumn: turno_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column turno
+		dataType: string
+		lineageTag: bcb5d0e3-bcb1-4ec4-afae-0b46e6733cb8
+		summarizeBy: none
+		sourceColumn: turno
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_jornada
+		dataType: string
+		lineageTag: f6a00758-cb13-4653-a129-d338b4251188
+		summarizeBy: none
+		sourceColumn: tipo_jornada
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas_nominales
+		dataType: double
+		formatString: 0.0
+		lineageTag: 15bdc39d-5a11-4ca5-9774-0511ea3d9be7
+		summarizeBy: none
+		sourceColumn: horas_nominales
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Jerarquía de turnos'
+		lineageTag: 13e222b8-e69d-4f3b-b928-c6a1af65b9a4
+
+		level tipo_jornada
+			lineageTag: f1b9ab7c-6aca-4c4a-9b77-b923df007dfa
+			column: tipo_jornada
+
+		level turno
+			lineageTag: 7ffb20e6-dd0c-4b94-87bf-c096ca604e28
+			column: turno
+
+	partition dim_turno = m
+		mode: import
+		source = ```
+			let
+			    Origen = PostgreSQL.Database(Servidor, BaseDeDatos),
+			    Tabla = Origen{[Schema = "dwh", Item = "dim_turno"]}[Data],
+			    Columnas = Table.SelectColumns(Tabla, {"turno_key", "turno", "tipo_jornada", "horas_nominales"}),
+			    Tipos = Table.TransformColumnTypes(Columnas, {{"turno_key", Int64.Type}, {"turno", type text}, {"tipo_jornada", type text}, {"horas_nominales", type number}})
+			in
+			    Tipos
+			```
+
+	annotation PBI_ResultType = Table

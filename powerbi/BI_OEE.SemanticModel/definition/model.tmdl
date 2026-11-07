@@ -1,0 +1,19 @@
+model Model
+	culture: es-CO
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-CO
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Servidor", "BaseDeDatos", "dim_fecha", "dim_maquina", "dim_turno", "dim_referencia", "dim_personal", "dim_paro", "fact_produccion_turno", "fact_paro", "Medidas"]
+
+ref table dim_fecha
+ref table dim_maquina
+ref table dim_turno
+ref table dim_referencia
+ref table dim_personal
+ref table dim_paro
+ref table fact_produccion_turno
+ref table fact_paro
+ref table Medidas

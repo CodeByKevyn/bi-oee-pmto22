@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "BI_OEE"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "2ff36007-35f1-4af2-8506-84bfe286852c"
+  }
+}

@@ -1,0 +1,60 @@
+table dim_maquina
+	lineageTag: 970216fc-23ed-4b04-b265-0b71959de095
+
+	column maquina_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 798c06fe-0494-46d2-ac70-38c908fb09a0
+		isHidden
+		summarizeBy: none
+		sourceColumn: maquina_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column maquina
+		dataType: string
+		lineageTag: 4fd26ec4-b372-456b-9b83-49cee903aefa
+		summarizeBy: none
+		sourceColumn: maquina
+
+		annotation SummarizationSetBy = Automatic
+
+	column linea
+		dataType: string
+		lineageTag: 992ef438-0571-4dc6-8896-32e3f6782941
+		summarizeBy: none
+		sourceColumn: linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidades_minuto
+		dataType: double
+		formatString: 0.0
+		lineageTag: 1138a4e4-7b73-4cf8-9328-4c79a2dcfd24
+		summarizeBy: none
+		sourceColumn: unidades_minuto
+
+		annotation SummarizationSetBy = Automatic
+
+	column factor_meta
+		dataType: double
+		formatString: 0.00
+		lineageTag: 22f89909-51a3-4990-8fa1-d41fbb01ea75
+		summarizeBy: none
+		sourceColumn: factor_meta
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_maquina = m
+		mode: import
+		source = ```
+			let
+			    Origen = PostgreSQL.Database(Servidor, BaseDeDatos),
+			    Tabla = Origen{[Schema = "dwh", Item = "dim_maquina"]}[Data],
+			    Columnas = Table.SelectColumns(Tabla, {"maquina_key", "maquina", "linea", "unidades_minuto", "factor_meta"}),
+			    Tipos = Table.TransformColumnTypes(Columnas, {{"maquina_key", Int64.Type}, {"maquina", type text}, {"linea", type text}, {"unidades_minuto", type number}, {"factor_meta", type number}})
+			in
+			    Tipos
+			```
+
+	annotation PBI_ResultType = Table

@@ -1,0 +1,154 @@
+table dim_fecha
+	lineageTag: afdd8733-3253-4562-8dce-6f52f0be600d
+	dataCategory: Time
+
+	column fecha_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 7b862eac-e1d7-400f-a361-b9f8f33c1a7f
+		isHidden
+		summarizeBy: none
+		sourceColumn: fecha_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 0c228266-6be4-4ee7-9418-6ebf9a8137e9
+		isKey
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio
+		dataType: int64
+		formatString: 0
+		lineageTag: 8329c05b-09e8-4319-9bea-85931a953cca
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column semestre
+		dataType: int64
+		formatString: 0
+		lineageTag: bd65693b-3d08-40fb-8153-6363f6724ba0
+		summarizeBy: none
+		sourceColumn: semestre
+
+		annotation SummarizationSetBy = Automatic
+
+	column trimestre
+		dataType: int64
+		formatString: 0
+		lineageTag: 6bba8d21-41c9-486e-a440-9ddbb45f51c3
+		summarizeBy: none
+		sourceColumn: trimestre
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		formatString: 0
+		lineageTag: 7db224cb-98b2-4411-a7a2-8cbdd2df2c20
+		summarizeBy: none
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre_mes
+		dataType: string
+		lineageTag: ede26c2e-2ce9-43e1-8523-95744b1e943e
+		summarizeBy: none
+		sourceColumn: nombre_mes
+		sortByColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio_mes
+		dataType: string
+		lineageTag: 205bc308-119b-4fe5-ba28-5a0db869135c
+		summarizeBy: none
+		sourceColumn: anio_mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column semana_iso
+		dataType: int64
+		formatString: 0
+		lineageTag: a74c4611-8f32-41f2-bab3-66023a782ebb
+		summarizeBy: none
+		sourceColumn: semana_iso
+
+		annotation SummarizationSetBy = Automatic
+
+	column dia_mes
+		dataType: int64
+		formatString: 0
+		lineageTag: 12fad802-9d42-4670-9da9-b14dda36e0d6
+		summarizeBy: none
+		sourceColumn: dia_mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column dia_semana
+		dataType: int64
+		formatString: 0
+		lineageTag: ea3a0683-ead8-4dcd-b65f-dcd647bc7548
+		isHidden
+		summarizeBy: none
+		sourceColumn: dia_semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre_dia
+		dataType: string
+		lineageTag: 11b41900-043e-4ef5-bfbd-7d143437f5ab
+		summarizeBy: none
+		sourceColumn: nombre_dia
+		sortByColumn: dia_semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column es_fin_de_semana
+		dataType: boolean
+		lineageTag: 3fc2a908-7219-41da-a953-404844e9e4a5
+		summarizeBy: none
+		sourceColumn: es_fin_de_semana
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Jerarquía de fechas'
+		lineageTag: 482ea760-2d1e-47bf-8bed-db070f7a0443
+
+		level anio
+			lineageTag: f91acb8d-9279-41e9-87ef-da6b5e68b7ca
+			column: anio
+
+		level trimestre
+			lineageTag: 236eba1f-5cb5-4b8e-9799-e72821af214a
+			column: trimestre
+
+		level nombre_mes
+			lineageTag: 54ba1e74-fb01-4df4-b349-dbc4e414a8aa
+			column: nombre_mes
+
+		level dia_mes
+			lineageTag: 859dcac8-b0f3-45fd-bb9f-ab2ba82cb2cd
+			column: dia_mes
+
+	partition dim_fecha = m
+		mode: import
+		source = ```
+			let
+			    Origen = PostgreSQL.Database(Servidor, BaseDeDatos),
+			    Tabla = Origen{[Schema = "dwh", Item = "dim_fecha"]}[Data],
+			    Columnas = Table.SelectColumns(Tabla, {"fecha_key", "fecha", "anio", "semestre", "trimestre", "mes", "nombre_mes", "anio_mes", "semana_iso", "dia_mes", "dia_semana", "nombre_dia", "es_fin_de_semana"}),
+			    Tipos = Table.TransformColumnTypes(Columnas, {{"fecha_key", Int64.Type}, {"fecha", type date}, {"anio", Int64.Type}, {"semestre", Int64.Type}, {"trimestre", Int64.Type}, {"mes", Int64.Type}, {"nombre_mes", type text}, {"anio_mes", type text}, {"semana_iso", Int64.Type}, {"dia_mes", Int64.Type}, {"dia_semana", Int64.Type}, {"nombre_dia", type text}, {"es_fin_de_semana", type logical}})
+			in
+			    Tipos
+			```
+
+	annotation PBI_ResultType = Table

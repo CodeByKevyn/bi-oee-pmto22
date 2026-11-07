@@ -1,0 +1,9 @@
+expression Servidor = "localhost:5432" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 9a1de24e-dab8-41d5-beef-16e964ef2ebe
+
+	annotation PBI_ResultType = Text
+
+expression BaseDeDatos = "bi_oee" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 0ac793f5-19af-485d-93b3-a3d9a44f576a
+
+	annotation PBI_ResultType = Text

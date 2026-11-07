@@ -1,0 +1,103 @@
+table dim_paro
+	lineageTag: ebb9c596-9546-4325-b836-3a3c62694354
+
+	column paro_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 22720c54-22dc-43ab-b5bb-849851054839
+		isHidden
+		summarizeBy: none
+		sourceColumn: paro_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo
+		dataType: int64
+		formatString: 0
+		lineageTag: e5498256-d64b-45f0-99ca-6ef07f1876d3
+		summarizeBy: none
+		sourceColumn: codigo
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre_codigo
+		dataType: string
+		lineageTag: 106b6a04-b612-4e0c-8a62-f486d945bbf3
+		summarizeBy: none
+		sourceColumn: nombre_codigo
+		sortByColumn: codigo
+
+		annotation SummarizationSetBy = Automatic
+
+	column area_impacto
+		dataType: string
+		lineageTag: d26542ee-46dc-4a26-baf8-dfcdf33335b6
+		summarizeBy: none
+		sourceColumn: area_impacto
+
+		annotation SummarizationSetBy = Automatic
+
+	column subcodigo_nivel1
+		dataType: string
+		lineageTag: 78aa8105-735d-4327-9ce2-62d62b4c0859
+		summarizeBy: none
+		sourceColumn: subcodigo_nivel1
+
+		annotation SummarizationSetBy = Automatic
+
+	column subcodigo_nivel2
+		dataType: string
+		lineageTag: d4b59c05-36cd-48a1-acfc-c3964671120d
+		summarizeBy: none
+		sourceColumn: subcodigo_nivel2
+
+		annotation SummarizationSetBy = Automatic
+
+	column clase_paro
+		dataType: string
+		lineageTag: 851d1a33-a030-4309-a1ee-ac3769fae866
+		summarizeBy: none
+		sourceColumn: clase_paro
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_perdida_oee
+		dataType: string
+		lineageTag: b75de6f2-50bc-4228-ac11-d8717e6e9dbe
+		summarizeBy: none
+		sourceColumn: tipo_perdida_oee
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Jerarquía de paros'
+		lineageTag: 9ff157b9-fb66-4e9e-9786-e466d6d076d0
+
+		level area_impacto
+			lineageTag: d42779f5-131e-4d48-9202-35bc73d58e1c
+			column: area_impacto
+
+		level nombre_codigo
+			lineageTag: 9b88b1e5-df71-4994-8733-1d97080f73bb
+			column: nombre_codigo
+
+		level subcodigo_nivel1
+			lineageTag: 47f439f3-b568-4623-ada2-19c60a9efbc1
+			column: subcodigo_nivel1
+
+		level subcodigo_nivel2
+			lineageTag: a637a18a-4f1c-4ce2-9aad-d0d29211a8d8
+			column: subcodigo_nivel2
+
+	partition dim_paro = m
+		mode: import
+		source = ```
+			let
+			    Origen = PostgreSQL.Database(Servidor, BaseDeDatos),
+			    Tabla = Origen{[Schema = "dwh", Item = "dim_paro"]}[Data],
+			    Columnas = Table.SelectColumns(Tabla, {"paro_key", "codigo", "nombre_codigo", "area_impacto", "subcodigo_nivel1", "subcodigo_nivel2", "clase_paro", "tipo_perdida_oee"}),
+			    Tipos = Table.TransformColumnTypes(Columnas, {{"paro_key", Int64.Type}, {"codigo", Int64.Type}, {"nombre_codigo", type text}, {"area_impacto", type text}, {"subcodigo_nivel1", type text}, {"subcodigo_nivel2", type text}, {"clase_paro", type text}, {"tipo_perdida_oee", type text}})
+			in
+			    Tipos
+			```
+
+	annotation PBI_ResultType = Table

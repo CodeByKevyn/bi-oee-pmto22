@@ -1,0 +1,213 @@
+table fact_produccion_turno
+	lineageTag: a417a0fe-04e4-47fa-9064-dbd9caa0a141
+
+	column fecha_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 309e7f98-746f-45b9-a7ba-784822c91b83
+		isHidden
+		summarizeBy: none
+		sourceColumn: fecha_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column maquina_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 44339c10-d465-4689-84eb-26e0065479e4
+		isHidden
+		summarizeBy: none
+		sourceColumn: maquina_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column turno_key
+		dataType: int64
+		formatString: 0
+		lineageTag: cbfe2f8d-2410-4a49-877d-357f3cc6d62d
+		isHidden
+		summarizeBy: none
+		sourceColumn: turno_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column referencia_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 1d849e2b-a111-45fb-bbe8-40360c046d96
+		isHidden
+		summarizeBy: none
+		sourceColumn: referencia_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column personal_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 890f6c23-a145-4615-9be8-bf7c724c9052
+		isHidden
+		summarizeBy: none
+		sourceColumn: personal_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_registro
+		dataType: string
+		lineageTag: 5e6203e3-ceb0-471e-a3d1-863ba7b0e693
+		summarizeBy: none
+		sourceColumn: tipo_registro
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas_programadas
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 32b36d01-af3a-4aa3-93f5-bc90f55dad76
+		summarizeBy: none
+		sourceColumn: horas_programadas
+
+		annotation SummarizationSetBy = Automatic
+
+	column pacas_producidas
+		dataType: double
+		formatString: #,0.0
+		lineageTag: 418bfbb0-79a2-4d17-92e7-08c833080a1d
+		summarizeBy: none
+		sourceColumn: pacas_producidas
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas_no_trabajadas
+		dataType: double
+		formatString: #,0.00
+		lineageTag: c14b0510-02c1-4aa9-b6d7-50312dbe5f3d
+		summarizeBy: none
+		sourceColumn: horas_no_trabajadas
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_no_trabajo
+		dataType: string
+		lineageTag: 0942c3fb-b6d3-4879-88eb-d52478e21103
+		summarizeBy: none
+		sourceColumn: tipo_no_trabajo
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas_paro_turno
+		dataType: double
+		formatString: #,0.00
+		lineageTag: c751459f-45b9-4d8c-b9f9-0f812dd96b62
+		summarizeBy: none
+		sourceColumn: horas_paro_turno
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas_paro_programado
+		dataType: double
+		formatString: #,0.00
+		lineageTag: f262b76d-b283-42c1-8a29-110d588262d5
+		summarizeBy: none
+		sourceColumn: horas_paro_programado
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas_paro_calidad
+		dataType: double
+		formatString: #,0.00
+		lineageTag: ff2edc17-9d4c-412e-801b-43bf853a7037
+		summarizeBy: none
+		sourceColumn: horas_paro_calidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas_paro_disponibilidad
+		dataType: double
+		formatString: #,0.00
+		lineageTag: d94874ac-64bd-4a63-a8c0-d4aec196c5c2
+		summarizeBy: none
+		sourceColumn: horas_paro_disponibilidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas_programadas_netas
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 39530168-e7ff-45b9-b325-7ddacabc1222
+		summarizeBy: none
+		sourceColumn: horas_programadas_netas
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas_operativas
+		dataType: double
+		formatString: #,0.00
+		lineageTag: e484a550-eebf-4fce-a915-5cca16535f4c
+		summarizeBy: none
+		sourceColumn: horas_operativas
+
+		annotation SummarizationSetBy = Automatic
+
+	column meta_pacas_hora
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 7354293c-2141-46d1-a352-2556b8edb5e1
+		summarizeBy: none
+		sourceColumn: meta_pacas_hora
+
+		annotation SummarizationSetBy = Automatic
+
+	column pacas_ideales
+		dataType: double
+		formatString: #,0.0
+		lineageTag: e327c967-a023-4cd5-b266-8377741af215
+		summarizeBy: none
+		sourceColumn: pacas_ideales
+
+		annotation SummarizationSetBy = Automatic
+
+	column es_atipico
+		dataType: boolean
+		lineageTag: 8ccda80c-6076-4560-81b8-d526e8f37d7e
+		summarizeBy: none
+		sourceColumn: es_atipico
+
+		annotation SummarizationSetBy = Automatic
+
+	column sin_referencia
+		dataType: boolean
+		lineageTag: 80adb24a-e11b-4b6d-a715-a0fb919dcc0f
+		summarizeBy: none
+		sourceColumn: sin_referencia
+
+		annotation SummarizationSetBy = Automatic
+
+	column meta_estimada
+		dataType: boolean
+		lineageTag: 57d53e43-f1ba-4498-91c7-78e6cbf8f01a
+		summarizeBy: none
+		sourceColumn: meta_estimada
+
+		annotation SummarizationSetBy = Automatic
+
+	column incluye_oee
+		dataType: boolean
+		lineageTag: fb7a3b3b-a6bd-4348-9393-5c5576b58cc1
+		summarizeBy: none
+		sourceColumn: incluye_oee
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_produccion_turno = m
+		mode: import
+		source = ```
+			let
+			    Origen = PostgreSQL.Database(Servidor, BaseDeDatos),
+			    Tabla = Origen{[Schema = "dwh", Item = "fact_produccion_turno"]}[Data],
+			    Columnas = Table.SelectColumns(Tabla, {"fecha_key", "maquina_key", "turno_key", "referencia_key", "personal_key", "tipo_registro", "horas_programadas", "pacas_producidas", "horas_no_trabajadas", "tipo_no_trabajo", "horas_paro_turno", "horas_paro_programado", "horas_paro_calidad", "horas_paro_disponibilidad", "horas_programadas_netas", "horas_operativas", "meta_pacas_hora", "pacas_ideales", "es_atipico", "sin_referencia", "meta_estimada", "incluye_oee"}),
+			    Tipos = Table.TransformColumnTypes(Columnas, {{"fecha_key", Int64.Type}, {"maquina_key", Int64.Type}, {"turno_key", Int64.Type}, {"referencia_key", Int64.Type}, {"personal_key", Int64.Type}, {"tipo_registro", type text}, {"horas_programadas", type number}, {"pacas_producidas", type number}, {"horas_no_trabajadas", type number}, {"tipo_no_trabajo", type text}, {"horas_paro_turno", type number}, {"horas_paro_programado", type number}, {"horas_paro_calidad", type number}, {"horas_paro_disponibilidad", type number}, {"horas_programadas_netas", type number}, {"horas_operativas", type number}, {"meta_pacas_hora", type number}, {"pacas_ideales", type number}, {"es_atipico", type logical}, {"sin_referencia", type logical}, {"meta_estimada", type logical}, {"incluye_oee", type logical}})
+			in
+			    Tipos
+			```
+
+	annotation PBI_ResultType = Table
