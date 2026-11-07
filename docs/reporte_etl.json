@@ -1,0 +1,65 @@
+{
+  "filas_origen": 8208,
+  "R1_columnas_descartadas": 3,
+  "R2_duplicados_exactos": 42,
+  "R3_filas_vacias": 222,
+  "descartado": {
+    "horas_programadas": 129.0,
+    "pacas": 1019.0,
+    "horas_no_trabajadas": 176.0,
+    "horas_paro": 18.116666666666667
+  },
+  "R4_referencias_corregidas": 490,
+  "R4_operarios_distintos_origen": 32,
+  "R4_tipo_paro_esquema_viejo": 1460,
+  "R5_pacas_atipicas": 11,
+  "R5_paro_mayor_que_horas": 3,
+  "filas_limpias": 7944,
+  "filas_turno_con_produccion": 5138,
+  "filas_tiempo_sin_programar": 1460,
+  "filas_solo_paro": 1346,
+  "referencias_repetidas_en_maestro": 2,
+  "referencias_con_unidades_distintas_entre_maquinas": 1,
+  "referencias_usadas": 48,
+  "referencias_sin_maestro": 5,
+  "eventos_de_paro": 16482,
+  "minutos_paro_cargados": 505892.1,
+  "eventos_con_subcodigo_no_reconocido": 0,
+  "paro_horas_sin_fila_de_produccion": 57.92,
+  "produccion_con_meta_estimada": 4146,
+  "produccion_sin_referencia": 4047,
+  "conciliacion": [
+    {
+      "indicador": "horas_programadas",
+      "excel": 38063.35,
+      "modelo": 37934.35,
+      "diferencia": 129.0,
+      "descartado_en_limpieza": 129.0,
+      "cuadra": true
+    },
+    {
+      "indicador": "pacas",
+      "excel": 378778.0,
+      "modelo": 377759.0,
+      "diferencia": 1019.0,
+      "descartado_en_limpieza": 1019.0,
+      "cuadra": true
+    },
+    {
+      "indicador": "horas_no_trabajadas",
+      "excel": 41519.85,
+      "modelo": 41343.85,
+      "diferencia": 176.0,
+      "descartado_en_limpieza": 176.0,
+      "cuadra": true
+    },
+    {
+      "indicador": "horas_paro",
+      "excel": 8449.65,
+      "modelo": 8431.54,
+      "diferencia": 18.12,
+      "descartado_en_limpieza": 18.12,
+      "cuadra": true
+    }
+  ]
+}
