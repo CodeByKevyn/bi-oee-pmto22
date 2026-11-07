@@ -1,0 +1,205 @@
+# Contact point, politica y reglas de alerta de Grafana, provisionados como codigo.
+# La direccion de correo es un ejemplo: para que llegue el aviso hay que configurar SMTP en Grafana
+# o cambiar el receptor por Telegram, Slack o un webhook.
+apiVersion: 1
+
+contactPoints:
+  - orgId: 1
+    name: mantenimiento
+    receivers:
+      - uid: oee-email-mantenimiento
+        type: email
+        settings:
+          addresses: mantenimiento@planta.example
+          singleEmail: true
+
+policies:
+  - orgId: 1
+    receiver: mantenimiento
+    group_by: ["alertname", "maquina"]
+    group_wait: 10s
+    group_interval: 1m
+    repeat_interval: 4h
+
+groups:
+  - orgId: 1
+    name: oee-operacion
+    folder: OEE
+    interval: 10s
+    rules:
+      - uid: oee-paro-3h-v1
+        title: Paro mayor al 50 % en las últimas 3 horas (Vinilos_1)
+        condition: B
+        data:
+          - refId: A
+            relativeTimeRange:
+              from: 600
+              to: 0
+            datasourceUid: bi-oee-pg
+            model:
+              refId: A
+              datasource:
+                type: grafana-postgresql-datasource
+                uid: bi-oee-pg
+              editorMode: code
+              format: table
+              rawQuery: true
+              rawSql: |
+                SELECT paro_pct::float AS paro_pct_3h
+                FROM rt.v_ultimas_3h
+                WHERE maquina = 'Vinilos_1'
+          - refId: B
+            datasourceUid: __expr__
+            model:
+              refId: B
+              type: threshold
+              expression: A
+              conditions:
+                - evaluator:
+                    type: gt
+                    params: [50]
+        noDataState: OK
+        execErrState: Error
+        for: 0s
+        isPaused: false
+        labels:
+          severidad: alta
+          maquina: Vinilos_1
+        annotations:
+          summary: "Vinilos_1 perdió más del 50 % de las últimas 3 horas en paros"
+          description: >-
+            Los paros no programados superan el 50 % de las últimas 3 horas registradas.
+            Ese nivel solo lo alcanza cerca del 8 % de los turnos históricos (percentil 92).
+            Revisar el código de paro en el tablero y avisar a mantenimiento.
+      - uid: oee-paro-3h-v2
+        title: Paro mayor al 50 % en las últimas 3 horas (Vinilos_2)
+        condition: B
+        data:
+          - refId: A
+            relativeTimeRange:
+              from: 600
+              to: 0
+            datasourceUid: bi-oee-pg
+            model:
+              refId: A
+              datasource:
+                type: grafana-postgresql-datasource
+                uid: bi-oee-pg
+              editorMode: code
+              format: table
+              rawQuery: true
+              rawSql: |
+                SELECT paro_pct::float AS paro_pct_3h
+                FROM rt.v_ultimas_3h
+                WHERE maquina = 'Vinilos_2'
+          - refId: B
+            datasourceUid: __expr__
+            model:
+              refId: B
+              type: threshold
+              expression: A
+              conditions:
+                - evaluator:
+                    type: gt
+                    params: [50]
+        noDataState: OK
+        execErrState: Error
+        for: 0s
+        isPaused: false
+        labels:
+          severidad: alta
+          maquina: Vinilos_2
+        annotations:
+          summary: "Vinilos_2 perdió más del 50 % de las últimas 3 horas en paros"
+          description: >-
+            Los paros no programados superan el 50 % de las últimas 3 horas registradas.
+            Ese nivel solo lo alcanza cerca del 8 % de los turnos históricos (percentil 92).
+            Revisar el código de paro en el tablero y avisar a mantenimiento.
+      - uid: oee-paro-3h-v3
+        title: Paro mayor al 50 % en las últimas 3 horas (Vinilos_3)
+        condition: B
+        data:
+          - refId: A
+            relativeTimeRange:
+              from: 600
+              to: 0
+            datasourceUid: bi-oee-pg
+            model:
+              refId: A
+              datasource:
+                type: grafana-postgresql-datasource
+                uid: bi-oee-pg
+              editorMode: code
+              format: table
+              rawQuery: true
+              rawSql: |
+                SELECT paro_pct::float AS paro_pct_3h
+                FROM rt.v_ultimas_3h
+                WHERE maquina = 'Vinilos_3'
+          - refId: B
+            datasourceUid: __expr__
+            model:
+              refId: B
+              type: threshold
+              expression: A
+              conditions:
+                - evaluator:
+                    type: gt
+                    params: [50]
+        noDataState: OK
+        execErrState: Error
+        for: 0s
+        isPaused: false
+        labels:
+          severidad: alta
+          maquina: Vinilos_3
+        annotations:
+          summary: "Vinilos_3 perdió más del 50 % de las últimas 3 horas en paros"
+          description: >-
+            Los paros no programados superan el 50 % de las últimas 3 horas registradas.
+            Ese nivel solo lo alcanza cerca del 8 % de los turnos históricos (percentil 92).
+            Revisar el código de paro en el tablero y avisar a mantenimiento.
+      - uid: oee-paro-3h-v4
+        title: Paro mayor al 50 % en las últimas 3 horas (Vinilos_4)
+        condition: B
+        data:
+          - refId: A
+            relativeTimeRange:
+              from: 600
+              to: 0
+            datasourceUid: bi-oee-pg
+            model:
+              refId: A
+              datasource:
+                type: grafana-postgresql-datasource
+                uid: bi-oee-pg
+              editorMode: code
+              format: table
+              rawQuery: true
+              rawSql: |
+                SELECT paro_pct::float AS paro_pct_3h
+                FROM rt.v_ultimas_3h
+                WHERE maquina = 'Vinilos_4'
+          - refId: B
+            datasourceUid: __expr__
+            model:
+              refId: B
+              type: threshold
+              expression: A
+              conditions:
+                - evaluator:
+                    type: gt
+                    params: [50]
+        noDataState: OK
+        execErrState: Error
+        for: 0s
+        isPaused: false
+        labels:
+          severidad: alta
+          maquina: Vinilos_4
+        annotations:
+          summary: "Vinilos_4 perdió más del 50 % de las últimas 3 horas en paros"
+          description: >-
+            Los paros no programados superan el 50 % de las últimas 3 horas registradas.
+            Ese nivel solo lo alcanza cerca del 8 % de los turnos históricos (percentil 92).
+            Revisar el código de paro en el tablero y avisar a mantenimiento.
