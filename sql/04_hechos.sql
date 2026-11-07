@@ -23,7 +23,8 @@ CREATE TABLE IF NOT EXISTS dwh.fact_produccion_turno (
     pacas_ideales numeric(12,3) NOT NULL,
     es_atipico boolean NOT NULL DEFAULT false,
     sin_referencia boolean NOT NULL DEFAULT false,
-    meta_estimada boolean NOT NULL DEFAULT false
+    meta_estimada boolean NOT NULL DEFAULT false,
+    incluye_oee boolean NOT NULL DEFAULT false
 );
 
 -- un evento de paro: registro del Excel x codigo de paro

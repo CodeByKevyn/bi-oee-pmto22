@@ -11,7 +11,6 @@ CODIGOS_PROGRAMADO = {4, 15, 16, 17, 18}
 CODIGOS_CALIDAD = {11, 12}
 # factor de la hoja "Calculadora de tiempos" (celda J10) para la meta por hora
 FACTOR_MAQUINA = {"Vinilos_1": 0.93, "Vinilos_2": 0.96, "Vinilos_3": 1.0, "Vinilos_4": 1.0}
-REFERENCIA_POR_DEFECTO = "Parchesitos 22cc (6 col)"
 
 # turno normalizado -> (inicio, fin, horas nominales, min aseo, min pausa activa, tipo)
 TURNOS = {
@@ -348,11 +347,14 @@ def construir_modelo(df, catalogos, rep):
 
     # meta por hora (hoja "Calculadora de tiempos"): 60 * factor * unidades/min / unidades por paca
     unidades = dict(zip(dim_ref["referencia"], dim_ref["unidades_por_paca"]))
-    defecto = unidades.get(REFERENCIA_POR_DEFECTO, 600.0)
+    # sin referencia (o fuera del maestro) se usa la referencia mas frecuente de esa maquina
+    frecuente = df[df["referencia"].isin([r for r, u in unidades.items() if u == u])].groupby("maquina")["referencia"].agg(lambda x: x.mode().iloc[0])
+    rep["referencia_por_defecto"] = frecuente.to_dict()
     prod["sin_referencia"] = prod["referencia"].isna()
     uxp = prod["referencia"].map(unidades)
     prod["meta_estimada"] = uxp.isna()
-    uxp = uxp.fillna(defecto)
+    por_defecto = prod["maquina"].map(frecuente).map(unidades)
+    uxp = uxp.fillna(por_defecto).fillna(600.0)
     um = prod["maquina"].map(unid_min)
     fm = prod["maquina"].map(FACTOR_MAQUINA)
     prod["meta_pacas_hora"] = (60.0 * fm * um / uxp).round(3)
@@ -360,11 +362,13 @@ def construir_modelo(df, catalogos, rep):
     rep["produccion_con_meta_estimada"] = int(prod["meta_estimada"].sum())
     rep["produccion_sin_referencia"] = int(prod["sin_referencia"].sum())
 
+    prod["incluye_oee"] = (prod["tipo_registro"] == "turno con producción") & ~prod["es_atipico"] & ~prod["meta_estimada"] & (prod["horas_operativas"] > 0)
+    rep["filas_que_entran_al_oee"] = int(prod["incluye_oee"].sum())
     fact_prod = prod[["fila_excel", "fecha", "maquina", "turno", "operaria", "referencia", "horas_programadas", "pacas_producidas",
                       "tipo_registro", "Horas_no_trabajadas",
                       "tipo_no_trabajo_codigo", "tipo_no_trabajo", "horas_paro_turno", "horas_paro_programado", "horas_paro_calidad",
                       "horas_paro_disponibilidad", "horas_programadas_netas", "horas_operativas", "meta_pacas_hora", "pacas_ideales",
-                      "es_atipico", "sin_referencia", "meta_estimada"]].rename(columns={"Horas_no_trabajadas": "horas_no_trabajadas"})
+                      "es_atipico", "sin_referencia", "meta_estimada", "incluye_oee"]].rename(columns={"Horas_no_trabajadas": "horas_no_trabajadas"})
     fact_prod["horas_no_trabajadas"] = fact_prod["horas_no_trabajadas"].fillna(0.0)
 
     return {"dim_fecha": dim_fecha, "dim_maquina": dim_maquina, "dim_turno": dim_turno, "dim_referencia": dim_ref,

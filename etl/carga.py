@@ -192,13 +192,13 @@ def cargar_hechos(con, m):
                       llave_pers(r.operaria), r.tipo_registro, r.horas_programadas, r.pacas_producidas, r.horas_no_trabajadas,
                       r.tipo_no_trabajo_codigo, r.tipo_no_trabajo, round(r.horas_paro_turno, 6), round(r.horas_paro_programado, 6),
                       round(r.horas_paro_calidad, 6), round(r.horas_paro_disponibilidad, 6), round(r.horas_programadas_netas, 6),
-                      round(r.horas_operativas, 6), r.meta_pacas_hora, r.pacas_ideales, bool(r.es_atipico), bool(r.sin_referencia), bool(r.meta_estimada)))
+                      round(r.horas_operativas, 6), r.meta_pacas_hora, r.pacas_ideales, bool(r.es_atipico), bool(r.sin_referencia), bool(r.meta_estimada), bool(r.incluye_oee)))
     cur.execute("TRUNCATE dwh.fact_produccion_turno, dwh.fact_paro RESTART IDENTITY")
     insertar(con, "dwh.fact_produccion_turno",
              ["fila_excel", "fecha_key", "maquina_key", "turno_key", "referencia_key", "personal_key", "tipo_registro", "horas_programadas",
               "pacas_producidas", "horas_no_trabajadas", "tipo_no_trabajo_codigo", "tipo_no_trabajo", "horas_paro_turno", "horas_paro_programado",
               "horas_paro_calidad", "horas_paro_disponibilidad", "horas_programadas_netas", "horas_operativas", "meta_pacas_hora", "pacas_ideales",
-              "es_atipico", "sin_referencia", "meta_estimada"], filas)
+              "es_atipico", "sin_referencia", "meta_estimada", "incluye_oee"], filas)
 
     ev = m["fact_paro"]
     filas = []
