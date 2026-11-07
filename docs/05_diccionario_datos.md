@@ -35,7 +35,7 @@ Las cuatro máquinas de envasado.
 | `maquina` | text |  | Nombre de la máquina (Vinilos_1 a Vinilos_4) | Tal como viene | `Base De Datos`.`Maquina` |
 | `linea` | text |  | Línea de envasado; hoy cada máquina es una línea | Igual a maquina | `Base De Datos`.`Maquina` |
 | `unidades_minuto` | numeric(6,1) |  | Velocidad nominal de la máquina en unidades por minuto | Valor más frecuente en la tabla de referencias de la máquina | `Tablas Desplegables`, tablas Tabla8, 14, 15 y 16, columna `unidades *minuto` |
-| `factor_meta` | numeric(4,2) |  | Factor que ajusta la meta por hora de la máquina | Constante de la hoja de cálculo (0,93; 0,96; 1; 1) | `Calculadora de tiempos`, celda J10 |
+| `factor_meta` | numeric(4,2) |  | Factor que ajusta la meta por hora de la máquina | Constante de la hoja de cálculo (0,93; 0,96; 1; 1) | `Calculadora de tiempos`, celda K10 |
 
 ## dwh.dim_turno
 
