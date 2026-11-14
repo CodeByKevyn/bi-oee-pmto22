@@ -1,6 +1,7 @@
 """Carga a PostgreSQL: staging, dimensiones, hechos y conciliacion."""
 import json
 import os
+import sys
 from datetime import date
 from pathlib import Path
 
@@ -29,9 +30,21 @@ def cargar_env():
 
 
 def conectar(base=None):
-    return pg.connect(host=os.environ.get("PGHOST", "localhost"), port=int(os.environ.get("PGPORT", "5432")),
-                      user=os.environ.get("PGUSER", "postgres"), password=os.environ.get("PGPASSWORD") or None,
-                      database=base or os.environ.get("PGDATABASE", "bi_oee"))
+    host = os.environ.get("PGHOST", "localhost")
+    puerto = int(os.environ.get("PGPORT", "5432"))
+    try:
+        return pg.connect(host=host, port=puerto, user=os.environ.get("PGUSER", "postgres"),
+                          password=os.environ.get("PGPASSWORD") or None,
+                          database=base or os.environ.get("PGDATABASE", "bi_oee"))
+    except AttributeError:
+        sys.exit(f"PostgreSQL en {host}:{puerto} pide contraseña y PGPASSWORD esta vacio. "
+                 "Copia .env.example a .env y escribe la contraseña de tu PostgreSQL.")
+    except (ConnectionRefusedError, pg.InterfaceError):
+        sys.exit(f"No hay un PostgreSQL escuchando en {host}:{puerto}. Revisa que este encendido y los valores PGHOST y PGPORT del .env.")
+    except pg.DatabaseError as e:
+        if "28P01" in str(e) or "password authentication" in str(e):
+            sys.exit("Usuario o contraseña de PostgreSQL incorrectos. Revisa PGUSER y PGPASSWORD en el .env.")
+        raise
 
 
 def crear_bd_si_no_existe():
