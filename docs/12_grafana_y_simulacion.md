@@ -82,6 +82,7 @@ En esta corrida la alerta salta en la primera hora de la falla porque la ventana
 
 - Las consultas de todos los paneles, de las variables y de las reglas se ejecutaron contra la base de datos con los filtros ya expandidos.
 - El simulador se corrió contra PostgreSQL, incluido el escenario de falla.
-- Las vistas de tiempo real devuelven un estado por máquina y la ventana de 3 horas.
+- En Grafana 13.2.3 sobre Windows (sin Docker) se creó el data source con el identificador `bi-oee-pg`, se importó el tablero y se crearon por la API las cuatro reglas con el mismo contenido de `alertas.yaml`. Las cinco consultas del tablero devuelven datos desde Grafana y las reglas se evalúan sin error.
+- Con la simulación (falla en Vinilos_3 desde la hora 6, 5 s por hora) la regla de Vinilos_3 pasó a Firing unos 49 s después de arrancar, cuando la ventana de tres horas superó el 50 %, y volvió a normal cuando la falla salió de la ventana. Las otras tres reglas siguieron en normal.
 
-Falta confirmar, en una instancia de Grafana con el plugin de PostgreSQL, que el tablero y las reglas se cargan por provisioning y que la alerta pasa a estado "Firing" con la simulación.
+No se probaron la carga automática por provisioning ni `docker compose`.
