@@ -118,4 +118,4 @@ El historial anterior del repositorio todavía contiene la contraseña de desarr
 - La calidad del OEE se aproxima con el tiempo de reproceso y materia prima defectuosa, porque el libro no trae unidades defectuosas.
 - 4.047 filas de producción no tienen referencia y su meta por hora es estimada; esas filas no entran al OEE.
 - Las metas salen de percentiles de la historia y falta validarlas con producción.
-- Las consultas del tablero y de las alertas se probaron contra la base de datos. Falta confirmar la carga automática en una instancia de Grafana y el arranque con `docker compose` en un equipo con Docker.
+- El tablero y las alertas se probaron en un Grafana 13.2.3 en Windows creándolos por la API; falta confirmar la carga automática por provisioning y el arranque con `docker compose` en un equipo con Docker.
